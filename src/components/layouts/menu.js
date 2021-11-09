@@ -1,31 +1,29 @@
 import React from "react";
-import axios from 'axios';
-import Config from '../../config';
+// import logo from "../../assets/images/YoshinoyaLogo.png";
+import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 
-class MenuComponent extends React.Component {
-  state = { headerMenu: [] };
+const Menu = () => {
+	const image = "/images/YoshinoyaLogo.png";
+	const searchIcon = "/images/searchIcon.png";
 
-  componentDidMount() {
-    axios
-      .get(`${Config.apiUrl}/menus/v1/menus/header-menu`)
-      .then(res =>
-        this.setState({
-          headerMenu: res.data,
-          loading: true
-        })
-      )
-      .catch(err => console.log(err))
-  }
+	return (
+		<AppBar className="app-bar" style={{ backgroundColor: "white" }}>
+			<Toolbar className="tool-bar">
+				<img src={image} alt="Yoshinoya logo" />
+				<div className="nav-links">
+					<span>Нүүр хуудас</span>
+					<span>Бидний тухай</span>
+					<span>Хоолны цэс</span>
+					<span>Хөнгөлөлт, урамшуулал</span>
+					<span>Салбарууд</span>
+					<img src={searchIcon} alt="Search Icon" className="search-icon" />
+					<Button variant="contained" style={{ backgroundColor: "#FF7800" }}>
+						Холбоо барих
+					</Button>
+				</div>
+			</Toolbar>
+		</AppBar>
+	);
+};
 
-  render() {
-    return (
-      <div className="main-header">
-        Here will be menu
-      </div>
-    );
-  }
-}
-
-export default MenuComponent;
-
-
+export default Menu;

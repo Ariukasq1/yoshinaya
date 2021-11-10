@@ -58,7 +58,6 @@ class Index extends React.Component {  constructor(props) {
     </div>
   </Grid>
   <Grid item xs={4}>
-    <Item>xs=4</Item>
   </Grid>
             <div className='icon-scroll' onClick={() => this.handlePageChange(1)}></div>
           </div>

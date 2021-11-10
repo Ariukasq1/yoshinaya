@@ -31,13 +31,6 @@ export default class extends React.Component {
 
     return (
       <Layout>
-        <PageHeader
-          className="slider page"
-          title={post.title.rendered}
-          img={headerImage ? headerImage : getData(post._embedded, 'image')}
-          breadcrumb={breadcrumb}
-          url={post.slug}
-        />
         <div className="row my-50">
           <h2>{post.title.rendered}</h2>
           <img src={getData(post._embedded, 'image')} />

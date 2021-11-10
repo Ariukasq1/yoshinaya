@@ -27,7 +27,7 @@ export default class extends React.Component {
     return (
       <Layout>
         <div className="row">
-          <h2>{page.title}</h2>
+          <h2>{page && page.title || ''}</h2>
           Here is page
           <img src={getData(page._embedded, 'image')} />
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
-// import logo from "../../assets/images/YoshinoyaLogo.png";
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import { AppBar, Toolbar, Button } from "@mui/material";
 
 const Menu = () => {
 	const image = "/images/YoshinoyaLogo.png";

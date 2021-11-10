@@ -10,7 +10,7 @@ const Menu = () => {
 			<Toolbar className="tool-bar">
 				<img src={image} alt="Yoshinoya logo" />
 				<div className="nav-links">
-					<span>Нүүр хуудас</span>
+						<span>Нүүр хуудас</span>
 					<span>Бидний тухай</span>
 					<span>Хоолны цэс</span>
 					<span>Хөнгөлөлт, урамшуулал</span>

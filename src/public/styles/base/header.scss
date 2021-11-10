@@ -1,19 +1,22 @@
 @import "./variables.scss";
 
 .app-bar {
-	.tool-bar {
-		display: flex;
-		justify-content: space-evenly;
-		height: 100px;
-		.nav-links {
-      align-items: center;
-      .search-icon {
-        margin: 0 40px;
-      }
-			span {
-				margin-left: 24px;
-				color: #616e7c;
-			}
-		}
-	}
+    .tool-bar {
+        display: flex;
+        justify-content: space-evenly;
+        height: 100px;
+
+        .nav-links {
+            align-items: center;
+
+            .search-icon {
+                margin: 0 40px;
+            }
+
+            span {
+                margin-left: 24px;
+                color: #616e7c;
+            }
+        }
+    }
 }

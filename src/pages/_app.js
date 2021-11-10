@@ -1,5 +1,6 @@
 import React from 'react'
 import "../public/styles/style.min.css";
+import "../public/styles/base/header.css";
 import Router from 'next/router';
 import NProgress from 'nprogress';
 

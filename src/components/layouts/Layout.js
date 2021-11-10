@@ -10,11 +10,11 @@ class Layout extends React.Component {
 		return (
 			<>
 				<Header title={title} image={image} />
-				{/* <main className="relative"> */}
-				<Menu />
-				{children}
-				{/* </main> */}
-				{/* <Footer /> */}
+				<main className="relative">
+					<Menu />
+					{children}
+				</main>
+				<Footer />
 			</>
 		);
 	}

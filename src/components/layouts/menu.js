@@ -1,9 +1,9 @@
 import React from "react";
-import { AppBar, Toolbar, Button, Box, Container } from "@mui/material";
+import { AppBar, Toolbar, Button, Container } from "@mui/material";
 
 const Menu = () => {
-	const image = "/images/YoshinoyaLogo.png";
-	const searchIcon = "/images/searchIcon.png";
+	const yoshinoyaLogo = "/images/YoshinoyaLogo.svg";
+	const searchIcon = "/images/searchIcon.svg";
 	return (
 		<div className="container">
 			<AppBar
@@ -14,7 +14,7 @@ const Menu = () => {
 				}}
 			>
 				<Toolbar className="tool-bar">
-					<img src={image} alt="Yoshinoya logo" />
+					<img src={yoshinoyaLogo} alt="Yoshinoya logo" />
 					<div className="nav-links">
 						<span>Нүүр хуудас</span>
 						<span>Бидний тухай</span>

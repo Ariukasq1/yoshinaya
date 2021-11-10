@@ -128,8 +128,16 @@ footer .copyright img {
   width: 110px;
 }
 
-#containerElement > div {
-  height: 100vh;
+.component {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.component.center {
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.min.css.map */

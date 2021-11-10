@@ -19,7 +19,7 @@ class Index extends React.Component {
 
   
   render() {
-    return (
+    return (  
       <Layout>
         <Container>
           <Grid container spacing={2}>              

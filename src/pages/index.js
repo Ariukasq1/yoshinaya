@@ -60,8 +60,8 @@ class Index extends React.Component {  constructor(props) {
     </div>
   </Grid>
   <Grid item xs={12} md={7}>
-  <div className="">
-    
+  <div className="align-center">
+    <img src="/images/ramen.png" alt="" />
     </div>
   </Grid>
             <div className='icon-scroll' onClick={() => this.handlePageChange(1)}></div>

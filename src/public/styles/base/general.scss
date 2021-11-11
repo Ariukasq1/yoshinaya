@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 body,
 h1,
 h2,
@@ -12,95 +14,133 @@ label,
 input,
 textarea,
 li {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
 }
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
 }
 
 body {
-  margin: 0;
-  color: $text-color;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  word-wrap: break-word;
-  font-kerning: normal;
-  line-height: 1.75;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-  overflow-x: hidden;
+	margin: 0;
+	color: $text-color;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	word-wrap: break-word;
+	font-kerning: normal;
+	line-height: 1.75;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-feature-settings: "kern", "liga", "clig", "calt";
+	-ms-font-feature-settings: "kern", "liga", "clig", "calt";
+	-webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+	font-feature-settings: "kern", "liga", "clig", "calt";
+	overflow-x: hidden;
 }
 
 img {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 a {
-  text-decoration: none;
-  box-shadow: none;
+	text-decoration: none;
+	box-shadow: none;
 }
 
 input:focus {
-  outline: none;
+	outline: none;
 }
 
 hr {
-  margin: 30px 0;
-  border: 0;
-  border-top: 1px solid $color-white;
-  opacity: .5;
+	margin: 30px 0;
+	border: 0;
+	border-top: 1px solid $color-white;
+	opacity: 0.5;
 }
 
 [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after,
 [class*=" flaticon-"]:after {
-  margin: 0 !important;
+	margin: 0 !important;
 }
 
 //no-spacing
 .no-margin {
-  margin: 0
+	margin: 0;
 }
 
 .no-padding {
-  padding: 0
+	padding: 0;
 }
 
 .no-border {
-  border: none !important;
+	border: none !important;
 }
 
 //display
 .flex {
-  display: flex;
+	display: flex;
 }
 
 .inline-block {
-  display: inline-block;
+	display: inline-block;
 }
 
 .align-center {
-  align-items: center;
+	align-items: center;
 }
 
 .justify-center {
-  justify-content: center;
+	justify-content: center;
 }
 
 .justify-between {
-  justify-content: space-between;
+	justify-content: space-between;
 }
 
 //position
 .absolute {
-  position: absolute;
+	position: absolute;
 }
 
 .relative {
-  position: relative;
+	position: relative;
+}
+
+.title {
+	font-size: 58px;
+	line-height: 67.97px;
+	letter-spacing: -0.5px;
+	color: $text-secondary-color;
+	font-weight: bold;
+}
+
+.text {
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: 0.5px;
+	color: $text-color;
+	max-width: 85%;
+}
+
+.tag {
+	border: 1px solid;
+	width: 137px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	border: none;
+	background-color: $background-color;
+	p {
+		font-weight: bold;
+		color: $text-color;
+	}
 }

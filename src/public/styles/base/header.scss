@@ -1,6 +1,8 @@
-.container {
+@import "./variables.scss";
+
+.menu-container {
 	border-bottom: 1px solid;
-	border-color: #00000014;
+	border-color: $border-color;
 	.app-bar {
 		position: static;
 		.tool-bar {
@@ -10,11 +12,14 @@
 
 			.nav-links {
 				display: flex;
+				align-items: center;
 				span {
 					margin-left: 24px;
-					color: #616e7c;
+					color: $text-color;
 				}
-
+				.search-icon {
+					margin: 0 2rem;
+				}
 				.menu-btn {
 					border-radius: 8px;
 					text-transform: none;

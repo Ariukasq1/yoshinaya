@@ -5,6 +5,8 @@ import Config from "../config";
 import { Container, Grid, Box } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
 import Map from "./map";
+import Special from "./special";
+import AppCover from "./app-cover";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -71,9 +73,11 @@ class Index extends React.Component {  constructor(props) {
             <div className='icon-scroll' onClick={() => this.handlePageChange(2)}></div>
           </div>
 
+						<Map />
+						<Special />
+						<AppCover />
+
         </ReactPageScroller>
-
-
           </Grid>
         </Container>
       </Layout>

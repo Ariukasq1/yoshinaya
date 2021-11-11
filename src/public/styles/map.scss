@@ -1,10 +1,48 @@
-.content-section {
-	.tag {
-		border: 1px solid;
-    width: 137px;
-    height: 42px;
-    p {
-      text-align: center;
-    }
+@import "./base/variables.scss";
+
+.background-image {
+	background-image: url("/images/backgroundPattern.svg");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	// background-size: cover;
+	.title-margin {
+		margin: 1.12rem 0;
+	}
+}
+
+.scroll-container {
+	overflow-y: scroll;
+	height: 500px;
+	transition: all 1s;
+	&::-webkit-scrollbar {
+		width: 2px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: $scroll-color;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $main-color;
+		// border: 4px solid transparent;
+		// border-radius: 10px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: $border-color;
+	}
+	.scroll-item {
+		display: flex;
+		margin: 3.6rem 0;
+		img {
+			align-self: flex-start;
+		}
+		.title-with-text {
+			margin-left: 2.3rem;
+			h3 {
+				font-size: 20px;
+				line-height: 28px;
+				letter-spacing: 0.15px;
+				color: $text-secondary-color;
+				margin-bottom: 1.06rem;
+			}
+		}
 	}
 }

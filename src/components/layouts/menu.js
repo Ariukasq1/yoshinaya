@@ -1,11 +1,12 @@
 import React from "react";
-import { AppBar, Toolbar, Button, Container } from "@mui/material";
+import { AppBar, Toolbar, Button } from "@mui/material";
 
 const Menu = () => {
 	const yoshinoyaLogo = "/images/YoshinoyaLogo.svg";
 	const searchIcon = "/images/searchIcon.svg";
+
 	return (
-		<div className="container">
+		<div className="menu-container">
 			<AppBar
 				className="app-bar"
 				style={{

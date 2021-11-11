@@ -1,10 +1,12 @@
 import WPAPI from "wpapi";
-import React, { useState } from "react";
+import React from "react";
 import Layout from "../components/layouts/Layout";
 import Config from "../config";
 import { Box, Button, Container, Fade, Grid, Modal } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
 import Map from "./map";
+import Special from "./special";
+import AppCover from "./app-cover";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -137,20 +139,21 @@ class Index extends React.Component {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Grid item xs={12} md={5}>
+                <Grid item xs={12} md={4}>
                   <div className="title">
+                    <div className="tag">Бүтээгдэхүүн</div>
                     <h1>Хамгийн сайн амт чанарыг санал болгоно</h1>
                     <Button variant="outlined">Бүх хоол харах</Button>
                   </div>
                   <div
                     className="icon-scroll-down"
-                    onClick={() => this.handlePageChange(1)}
+                    onClick={() => this.handlePageChange(2)}
                   >
                     <span>Scroll down</span>
                     <img src="/images/arrow-down.svg" alt="arrow down" />
                   </div>
                 </Grid>
-                <Grid item xs={12} md={7}>
+                <Grid item xs={12} md={8}>
                   <div className="relative" align="center">
                     <img src="/images/leaf.svg" alt="" className="shape-leaf" />
                     <div className="section-shape">
@@ -164,6 +167,56 @@ class Index extends React.Component {
                     />
                   </div>
                 </Grid>
+              </Grid>
+            </Container>
+          </div>
+          <div className="component center" key="home-map">
+            <Container>
+              <Grid
+                container
+                spacing={2}
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Map />
+                <div
+                  className="icon-scroll-down"
+                  onClick={() => this.handlePageChange(3)}
+                >
+                  <span>Scroll down</span>
+                  <img src="/images/arrow-down.svg" alt="arrow down" />
+                </div>
+              </Grid>
+            </Container>
+          </div>
+          <div className="component center" key="home-special">
+            <Container className="relative">
+              <Grid
+                container
+                spacing={2}
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Special />
+                <div
+                  className="icon-scroll-down"
+                  onClick={() => this.handlePageChange(4)}
+                >
+                  <span>Scroll down</span>
+                  <img src="/images/arrow-down.svg" alt="arrow down" />
+                </div>
+              </Grid>
+            </Container>
+          </div>
+          <div className="component center" key="home-AppCover">
+            <Container>
+              <Grid
+                container
+                spacing={2}
+                alignItems="center"
+                justifyContent="center"
+              >
+                <AppCover />
               </Grid>
             </Container>
           </div>

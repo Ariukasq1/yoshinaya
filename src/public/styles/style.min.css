@@ -103,6 +103,29 @@ hr {
   position: relative;
 }
 
+.text {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #616E7C;
+  max-width: 85%;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  background-color: #ff78001f;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.15px;
+  color: #616E7C;
+  font-weight: 600;
+}
+.tag p {
+  font-weight: bold;
+  color: #616E7C;
+}
+
 header {
   border-bottom: 1px solid;
   border-color: #00000014;
@@ -152,6 +175,50 @@ header .tool-bar .nav-links .menu-btn {
 }
 .footer-container .content .address-container .icons img {
   margin-left: 1.25rem;
+}
+
+.background-image {
+  background-image: url("/images/backgroundPattern.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.background-image .title-margin {
+  margin: 1.12rem 0;
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  height: 500px;
+  transition: all 1s;
+}
+.scroll-container::-webkit-scrollbar {
+  width: 2px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #FF7800;
+}
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #00000014;
+}
+.scroll-container .scroll-item {
+  display: flex;
+  margin: 3.6rem 0;
+}
+.scroll-container .scroll-item img {
+  align-self: flex-start;
+}
+.scroll-container .scroll-item .title-with-text {
+  margin-left: 2.3rem;
+}
+.scroll-container .scroll-item .title-with-text h3 {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #1F2933;
+  margin-bottom: 1.06rem;
 }
 
 .component {
@@ -220,10 +287,22 @@ header .tool-bar .nav-links .menu-btn {
   font-size: 2.5rem;
   line-height: 3rem;
   margin-bottom: 0;
+  letter-spacing: -0.5px;
 }
 .title .orange {
   color: #FF7800;
   margin-bottom: 2rem;
+}
+.title button {
+  color: #FF7800;
+  text-transform: initial;
+  border-color: #FF7800;
+  text-align: center;
+  letter-spacing: 0.0125em;
+  padding: 0.5rem 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 .video-btn {

@@ -1,25 +1,31 @@
 import React from "react";
-import { Container, Grid, Box } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 
 const Map = () => {
-	const mapFrame = "/images/mapFrame.svg";
+  const mapFrame = "/images/map.svg";
 
-	return (
-		<Box sx={{ display: "flex" }}>
-			<div className="content-section">
-				<div className="tag">
-					<p>Үүсэл хөгжил</p>
-				</div>
-				<h1>Yoshinoya олон улсад</h1>
-				<p>
-					YOSHINOYA олон улсын түргэн хоолны сүлжээ ресторан 12 гаруй оронд
-					2,100 гаруй салбартайгаар үйл ажиллагаа явуулж байгаа бөгөөдМонгол улс
-					Yoshinoya-н франчайз эрхийг авсан 13 дахь орон болсон
-				</p>
-			</div>
-			<img src={mapFrame} alt="map" />
-		</Box>
-	);
+  return (
+    <div className="component center" key="home-map">
+      <Grid item xs={12} md={5}>
+        <div className="content">
+          <div className="tag">
+            <p className="no-margin">Үүсэл хөгжил</p>
+          </div>
+          <div className="title">
+            <h1 className="title-margin">Yoshinoya олон улсад</h1>
+          </div>
+          <p className="text">
+            YOSHINOYA олон улсын түргэн хоолны сүлжээ ресторан 12 гаруй оронд
+            2,100 гаруй салбартайгаар үйл ажиллагаа явуулж байгаа бөгөөд Монгол
+            улс Yoshinoya-н франчайз эрхийг авсан 13 дахь орон болсон
+          </p>
+        </div>
+      </Grid>
+      <Grid item xs={12} md={7}>
+        <img src={mapFrame} alt="map" />
+      </Grid>
+    </div>
+  );
 };
 
 export default Map;

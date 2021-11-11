@@ -70,11 +70,24 @@
     font-size: 2.5rem;
     line-height: 3rem;
     margin-bottom: 0;
+    letter-spacing: -0.5px;
   }
 
   .orange {
     color: $main-color;
     margin-bottom: 2rem;
+  }
+
+  button {
+    color: $main-color;
+    text-transform: initial;
+    border-color: $main-color;
+    text-align: center;
+    letter-spacing: 0.0125em;
+    padding: 0.5rem 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 1rem;
   }
 
   color: $text-secondary-color;

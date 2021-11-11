@@ -1,11 +1,139 @@
+@import './base/variables.scss';
+
 .component {
   height: 100%;
   width: 100%;
   display: flex;
   position: relative;
   overflow: hidden;
-  &.center{
+
+  &.center {
     justify-content: center;
     align-items: center;
+  }
+}
+
+.section-shape {
+  position: absolute;
+  right: 0;
+  top: 0%;
+  left: 0;
+  bottom: 2rem;
+  opacity: 0.9;
+  animation: rotatedHalfTwo 10s alternate infinite linear;
+  z-index: -1;
+}
+
+.section-shape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.9;
+  animation: rotatedHalfTwo 10s alternate infinite linear;
+  z-index: -1;
+
+  img {
+    max-width: 90%;
+  }
+
+  &:before {
+    content: url(../images/Vector1.svg);
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    animation: rotatedHalfTwo 12s alternate infinite linear;
+  }
+}
+
+.shape-leaf {
+  position: absolute;
+  left: 40%;
+  top: -5rem;
+  width: 7rem;
+}
+
+.shape-tomato {
+  position: absolute;
+  bottom: -4rem;
+  right: 30%;
+  width: 7rem;
+}
+
+.home-about .MuiContainer-root {
+  // padding-bottom: 6rem;
+}
+
+.title {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 0;
+  }
+
+  .orange {
+    color: $main-color;
+    margin-bottom: 2rem;
+  }
+
+  color: $text-secondary-color;
+  margin-right: 1rem;
+}
+
+.video-btn {
+  color: $text-secondary-color;
+  text-transform: initial;
+
+  img {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+}
+
+.MuiBox-root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  // boxShadow: 24,
+}
+
+.icon-scroll-down {
+  position: absolute;
+  display: inline-grid;
+  text-align: center;
+  bottom: 1rem;
+  color: #CBD2D9;
+  letter-spacing: 0.5;
+
+  img {
+    margin: auto;
+    width: 40px;
+  }
+}
+
+@-webkit-keyframes rotatedHalfTwo {
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotatedHalfTwo {
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }

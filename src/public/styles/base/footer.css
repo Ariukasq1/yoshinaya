@@ -1,0 +1,25 @@
+.footer-container {
+  background-color: #ffff;
+}
+.footer-container .content {
+  padding: 0 4rem;
+}
+.footer-container .content .address-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-container .content .address-container .address {
+  width: 380px;
+  padding: 2rem 0;
+}
+.footer-container .content .address-container .icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.25rem;
+}
+.footer-container .content .address-container .icons img {
+  margin-left: 1.25rem;
+}
+
+/*# sourceMappingURL=footer.css.map */

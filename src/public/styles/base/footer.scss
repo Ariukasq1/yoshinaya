@@ -1,9 +1,23 @@
-footer {
-  background: #eee;
-
-  .copyright { 
-    opacity: .9;
-
-    img { width: 110px; }
-  }
+.footer-container {
+	background-color: #ffff;
+	.content {
+		padding: 0 4rem;
+		.address-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.address {
+				width: 380px;
+				padding: 2rem 0;
+			}
+			.icons {
+				display: flex;
+				justify-content: flex-end;
+				margin-bottom: 1.25rem;
+				img {
+					margin-left: 1.25rem;
+				}
+			}
+		}
+	}
 }

@@ -1,10 +1,10 @@
-import WPAPI from 'wpapi';
-import React from 'react';
+import WPAPI from "wpapi";
+import React from "react";
 import Layout from "../components/layouts/Layout";
 import Config from "../config";
-import { Container, Grid, Box } from "@mui/material"
+import { Container, Grid, Box } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
-
+import Map from "./map";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 

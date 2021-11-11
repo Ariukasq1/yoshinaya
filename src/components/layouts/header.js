@@ -12,6 +12,7 @@ function Header({ title, image }) {
     <>
       <Head>
         <title>{title || 'Gerege WP Template'}</title>
+
         <meta charSet="UTF-8" />
         <meta name="keywords" content="wp, gerege" />
         <meta name="description" content="Here is website description" />

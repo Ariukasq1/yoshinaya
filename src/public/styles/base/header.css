@@ -1,0 +1,28 @@
+.container {
+  border-bottom: 1px solid;
+  border-color: #00000014;
+}
+.container .app-bar {
+  position: static;
+}
+.container .app-bar .tool-bar {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+}
+.container .app-bar .tool-bar .nav-links {
+  display: flex;
+}
+.container .app-bar .tool-bar .nav-links span {
+  margin-left: 24px;
+  color: #616e7c;
+}
+.container .app-bar .tool-bar .nav-links .menu-btn {
+  border-radius: 8px;
+  text-transform: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  box-shadow: -8px 10px 34px -5px rgba(255, 120, 0, 0.36);
+}
+
+/*# sourceMappingURL=header.css.map */

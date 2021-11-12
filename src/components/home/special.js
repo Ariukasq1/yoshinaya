@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid, Container } from "@mui/material";
-// import { render } from "nprogress";
 
 class Special extends React.Component {
   render() {

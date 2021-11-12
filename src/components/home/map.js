@@ -25,7 +25,7 @@ class Map extends React.Component {
             </div>
             <div
               className="icon-scroll-down"
-              onClick={() => this.props.handleChange(4)}
+              onClick={() => this.props.handleChange(5)}
             >
               <span>Scroll down</span>
               <img src="/images/arrow-down.svg" alt="arrow down" />

@@ -1,15 +1,35 @@
 import React from "react";
-import { Grid, Box } from "@mui/material";
+import { Grid, Container } from "@mui/material";
 
 const AppCover = () => {
-	const applicationCover = "/images/applicationCover.svg";
+	const appPhone = "/images/phones.svg";
+	const playStore = "/images/playStore.svg";
+	const appStore = "/images/appStore.svg";
 
 	return (
-		<div className="component center" key="home-app-cover">
-			<Grid item xs={12} md={12}>
-				<img src={applicationCover} alt="application cover" />
+		<Container>
+			<Grid container spacing={2} alignItems="center" justifyContent="center">
+				<div className="background-style">
+					<Grid item xs={12} md={6} className="app-content">
+						<h2>
+							Та манай аппликейшиныг татсанаар олон онцгой боломжууд хүлээж
+							байна.
+						</h2>
+						<div className="store-images">
+							<img src={appStore} alt="app store" />
+							<img src={playStore} alt="play store" />
+						</div>
+					</Grid>
+					<Grid item sx={12} md={7}>
+						<img
+							src={appPhone}
+							alt="application phone"
+							className="app-cover-img"
+						/>
+					</Grid>
+				</div>
 			</Grid>
-		</div>
+		</Container>
 	);
 };
 

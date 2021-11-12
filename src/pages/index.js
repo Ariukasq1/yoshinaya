@@ -1,12 +1,14 @@
 import WPAPI from "wpapi";
+import Config from "../config";
 import React from "react";
 import Layout from "../components/layouts/Layout";
-import Config from "../config";
 import { Box, Button, Container, Fade, Grid, Modal } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
-import Map from "./map";
-import Special from "./special";
+import Special from "../components/home/special";
 import AppCover from "./app-cover";
+import Map from "../components/home/map";
+import Products from "../components/home/products";
+import History from "../components/home/history";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -19,9 +21,8 @@ class Index extends React.Component {
   // static async getInitialProps() {
   //   let apiMethod = wp.categories();
 
-  //   const mainTabCategory = await apiMethod
-  //     .parent(21)
-  //     .embed();
+  // static async getInitialProps() {
+  //   let apiMethod = wp.categories();
 
   //   return { mainTabCategory };
   // }
@@ -53,6 +54,7 @@ class Index extends React.Component {
           renderAllPagesOnFirstRender={true}
         >
           <div className="component center home-about" key="home-about">
+            <div className="ellipse"></div>
             <Container>
               <Grid
                 container
@@ -61,7 +63,7 @@ class Index extends React.Component {
                 justifyContent="center"
               >
                 <Grid item xs={12} md={5}>
-                  <div className="">
+                  <div>
                     <div className="title">
                       <h1>Yoshinoya-н Товч танилцуулга</h1>
                       <p className="orange">Good, Easy, Fast</p>
@@ -131,94 +133,39 @@ class Index extends React.Component {
               </Grid>
             </Container>
           </div>
-          <div className="component center" key="home-products">
+          <div className="component center home-products" key="home-products">
+            <div className="ellipse"></div>
             <Container>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Grid item xs={12} md={4}>
-                  <div className="title">
-                    <div className="tag">Бүтээгдэхүүн</div>
-                    <h1>Хамгийн сайн амт чанарыг санал болгоно</h1>
-                    <Button variant="outlined">Бүх хоол харах</Button>
-                  </div>
-                  <div
-                    className="icon-scroll-down"
-                    onClick={() => this.handlePageChange(2)}
-                  >
-                    <span>Scroll down</span>
-                    <img src="/images/arrow-down.svg" alt="arrow down" />
-                  </div>
-                </Grid>
-                <Grid item xs={12} md={8}>
-                  <div className="relative" align="center">
-                    <img src="/images/leaf.svg" alt="" className="shape-leaf" />
-                    <div className="section-shape">
-                      <img src="/images/Vector2.svg" alt="vector2" />
-                    </div>
-                    <img src="/images/ramen.png" alt="" />
-                    <img
-                      src="/images/tomato.svg"
-                      alt="shape-tomato"
-                      className="shape-tomato"
-                    />
-                  </div>
-                </Grid>
-              </Grid>
+              <Products handleChange={this.handlePageChange} />
             </Container>
+          </div>
+          <div className="component center history" key="home-history">
+            <div className="ellipse"></div>
+            <Container>
+              <History handleChange={this.handlePageChange} />
+            </Container>
+            <div className="section-shape-line">
+              <img
+                src="/images/Vector5.svg"
+                alt="vector"
+                className="section-shape-line"
+              />
+              <img
+                src="/images/Vector6.svg"
+                alt="vector"
+                className="section-shape-line"
+              />
+            </div>
           </div>
           <div className="component center" key="home-map">
-            <Container>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Map />
-                <div
-                  className="icon-scroll-down"
-                  onClick={() => this.handlePageChange(3)}
-                >
-                  <span>Scroll down</span>
-                  <img src="/images/arrow-down.svg" alt="arrow down" />
-                </div>
-              </Grid>
-            </Container>
+            <Map handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-special">
-            <Container className="relative">
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Special />
-                <div
-                  className="icon-scroll-down"
-                  onClick={() => this.handlePageChange(4)}
-                >
-                  <span>Scroll down</span>
-                  <img src="/images/arrow-down.svg" alt="arrow down" />
-                </div>
-              </Grid>
-            </Container>
+            <div className="ellipse"></div>
+            <Special handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-AppCover">
-            <Container>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <AppCover />
-              </Grid>
-            </Container>
+            <AppCover />
           </div>
         </ReactPageScroller>
       </Layout>

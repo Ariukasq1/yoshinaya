@@ -64,6 +64,7 @@ class Index extends React.Component {
           renderAllPagesOnFirstRender={true}
         >
           <div className="component center home-about" key="home-about">
+            <div className="ellipse"></div>
             <Container>
               <Grid
                 container
@@ -188,6 +189,7 @@ class Index extends React.Component {
             </Container>
           </div>
           <div className="component center" key="home-map">
+            <div className="ellipse"></div>
             <Container>
               <Grid
                 container

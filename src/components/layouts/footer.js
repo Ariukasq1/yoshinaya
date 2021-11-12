@@ -1,10 +1,5 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
-import {
-	RiFacebookCircleLine,
-	RiTwitterLine,
-	RiInstagramLine,
-} from "react-icons/ri";
 
 const Footer = () => {
 	const yoshinoyaLogo = "/images/YoshinoyaLogo.svg";
@@ -23,11 +18,6 @@ const Footer = () => {
 						<div className="left-side">
 							<div className="icons">
 								<Typography color="#616E7C">Follow us:</Typography>
-								<a href="https://www.facebook.com/YoshinoyaMongolia/" target="_blank">
-									<RiFacebookCircleLine size="1.8em" />
-								</a>
-								<RiTwitterLine size="1.8em" />
-								<RiInstagramLine size="1.8em" />
 							</div>
 							<Typography color="black">
 								Зохиогчийн эрхээр хамгаалагдсан 2021 он

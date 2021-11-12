@@ -1,3 +1,34 @@
-@media only screen and (min-width: 961px) {
-	
+@media only screen and (max-width: 767px) {
+  .react-scroll-page-wrapper {
+    height: initial !important;
+
+    .react-scroll-page {
+      transform: none !important;
+      transition: none !important;
+      .icon-scroll-down {
+        display: none;
+      }
+      // & > div {
+      //   height: initial !important;
+
+      //   .component {
+      //     padding: 2rem 0;
+      //     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      //     min-height: 90vh;
+
+      //     &:first-child {
+      //       padding-top: 0;
+      //     }
+
+      //     .arrow-wrapper {
+      //       justify-content: flex-end;
+
+      //       .custom-arrow {
+      //         bottom: 1rem;
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
 }

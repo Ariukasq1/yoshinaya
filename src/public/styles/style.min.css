@@ -59,8 +59,7 @@ hr {
   margin: 0; }
 
 .mb-2 {
-  margin-bottom: 2rem;
-}
+  margin-bottom: 2rem; }
 
 .no-padding {
   padding: 0; }
@@ -149,81 +148,71 @@ header {
           display: none; } }
 
 .footer-container {
-  background-color: #fff;
-}
-.footer-container .content {
-  padding: 0 4rem;
-}
-.footer-container .content .address-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.footer-container .content .address-container .address {
-  width: 380px;
-  padding: 2rem 0;
-}
-.footer-container .content .address-container .icons {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1.25rem;
-}
-.footer-container .content .address-container .icons a:visited {
-  color: #616E7C;
-}
-.footer-container .content .address-container .icons a svg {
-  text-align: center;
-  margin-left: 0.8rem;
-  cursor: pointer;
-  transition: ease-out 0.5s;
-}
-.footer-container .content .address-container .icons a svg:hover {
-  fill: #FF7800;
-}
+  background-color: #fff; }
+  .footer-container .content {
+    padding: 0 4rem; }
+    .footer-container .content .address-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .footer-container .content .address-container .address {
+        width: 380px;
+        padding: 2rem 0; }
+      .footer-container .content .address-container .icons {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1.25rem; }
+        .footer-container .content .address-container .icons a:visited {
+          color: #616E7C; }
+        .footer-container .content .address-container .icons a svg {
+          text-align: center;
+          margin-left: 0.8rem;
+          cursor: pointer;
+          transition: ease-out 0.5s; }
+          .footer-container .content .address-container .icons a svg:hover {
+            fill: #FF7800; }
 
+@media only screen and (max-width: 767px) {
+  .react-scroll-page-wrapper {
+    height: initial !important; }
+    .react-scroll-page-wrapper .react-scroll-page {
+      transform: none !important;
+      transition: none !important; }
+      .react-scroll-page-wrapper .react-scroll-page .icon-scroll-down {
+        display: none; } }
 .special-ramen {
   width: 284px;
   height: 284px;
-  margin: auto;
-}
+  margin: auto; }
 
 .scroll-container {
   overflow-y: scroll;
   height: 500px;
-  transition: all 1s;
-}
-.scroll-container::-webkit-scrollbar {
-  width: 2px;
-}
-.scroll-container::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
-}
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: #FF7800;
-}
-.scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #00000014;
-}
-.scroll-container .scroll-item {
-  display: flex;
-  margin: 1.5rem 0;
-}
-.scroll-container .scroll-item img {
-  width: 90px;
-  height: 90px;
-}
-.scroll-container .scroll-item .title-with-text {
-  margin-left: 2.3rem;
-  margin-top: 1rem;
-}
-.scroll-container .scroll-item .title-with-text h6 {
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.15px;
-  color: #1F2933;
-  margin-bottom: 1.06rem;
-  font-weight: bold;
-}
+  transition: all 1s; }
+  .scroll-container::-webkit-scrollbar {
+    width: 2px; }
+  .scroll-container::-webkit-scrollbar-track {
+    background-color: #F5F5F5; }
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: #FF7800; }
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #00000014; }
+  .scroll-container .scroll-item {
+    display: flex;
+    margin: 1.5rem 0; }
+    .scroll-container .scroll-item img {
+      width: 90px;
+      height: 90px; }
+    .scroll-container .scroll-item .title-with-text {
+      margin-left: 2.3rem;
+      margin-top: 1rem; }
+      .scroll-container .scroll-item .title-with-text h6 {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.15px;
+        color: #1F2933;
+        margin-bottom: 1.06rem;
+        font-weight: bold; }
 
 .background-style {
   background-color: #ff78001f;
@@ -232,25 +221,20 @@ header {
   display: flex;
   position: relative;
   align-items: center;
-  border-radius: 8px;
-}
-.background-style .app-content {
-  padding-left: 5rem;
-}
-.background-style .app-content h2 {
-  font-size: 2.1rem;
-  line-height: 2.8rem;
-  letter-spacing: 0.25px;
-  color: #1F2933;
-}
-.background-style .app-content .store-images img {
-  margin-right: 1rem;
-  cursor: pointer;
-}
-.background-style .app-cover-img {
-  position: absolute;
-  top: -20%;
-}
+  border-radius: 8px; }
+  .background-style .app-content {
+    padding-left: 5rem; }
+    .background-style .app-content h2 {
+      font-size: 2.1rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.25px;
+      color: #1F2933; }
+    .background-style .app-content .store-images img {
+      margin-right: 1rem;
+      cursor: pointer; }
+  .background-style .app-cover-img {
+    position: absolute;
+    top: -20%; }
 
 .ellipse {
   position: absolute;
@@ -260,8 +244,7 @@ header {
   bottom: 50.16%;
   background: radial-gradient(50% 50% at 50% 50%, #FF7800 0%, rgba(255, 120, 0, 0) 100%);
   opacity: 0.5;
-  filter: blur(100px);
-}
+  filter: blur(100px); }
 
 .component {
   height: 100%;
@@ -297,14 +280,11 @@ header {
   left: 0;
   bottom: 10vh;
   opacity: 0.9;
-  z-index: -1;
-}
-.section-shape-line img {
-  animation: navigate 10s infinite linear;
-}
-.section-shape-line img:first-child {
-  animation: navigate 15s infinite linear;
-}
+  z-index: -1; }
+  .section-shape-line img {
+    animation: navigate 10s infinite linear; }
+    .section-shape-line img:first-child {
+      animation: navigate 15s infinite linear; }
 
 .shape-leaf {
   position: absolute;
@@ -367,33 +347,27 @@ header {
 
 .home-products .MuiCard-root.product-item {
   box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
-  border-radius: 24px;
-}
-.home-products .MuiCard-root.product-item .loyalty {
-  background-color: #FF7800;
-  color: #fff;
-  text-align: center;
-  padding: 0.5rem;
-  font-weight: 700;
-  font-size: 12px;
-}
-.home-products .MuiCard-root.product-item .MuiCardMedia-img {
-  object-fit: contain;
-  height: 200px;
-  object-position: center;
-}
-.home-products .MuiCard-root.product-item .MuiCardContent-root {
-  color: #616E7C;
-}
-.home-products .MuiCard-root.product-item .MuiCardContent-root h4 {
-  color: #1F2933;
-  margin: 0;
-}
-.home-products .MuiCard-root.product-item .price {
-  color: #FF7800;
-  font-weight: 600;
-  padding: 0 0.5rem 0.5rem;
-}
+  border-radius: 24px; }
+  .home-products .MuiCard-root.product-item .loyalty {
+    background-color: #FF7800;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 12px; }
+  .home-products .MuiCard-root.product-item .MuiCardMedia-img {
+    object-fit: contain;
+    height: 200px;
+    object-position: center; }
+  .home-products .MuiCard-root.product-item .MuiCardContent-root {
+    color: #616E7C; }
+    .home-products .MuiCard-root.product-item .MuiCardContent-root h4 {
+      color: #1F2933;
+      margin: 0; }
+  .home-products .MuiCard-root.product-item .price {
+    color: #FF7800;
+    font-weight: 600;
+    padding: 0 0.5rem 0.5rem; }
 
 .history-item {
   background: #FFFFFF;
@@ -401,20 +375,16 @@ header {
   box-sizing: border-box;
   border-radius: 8px;
   margin: 0;
-  width: 100%;
-}
-.history-item h4 {
-  color: #1F2933;
-  font-weight: 700;
-}
+  width: 100%; }
+  .history-item h4 {
+    color: #1F2933;
+    font-weight: 700; }
 
 .slick-list {
-  margin: 0 -0.5rem;
-}
+  margin: 0 -0.5rem; }
 
 .slick-slide > div {
-  padding: 0 0.5rem;
-}
+  padding: 0 0.5rem; }
 
 @-webkit-keyframes rotatedHalfTwo {
   0% {
@@ -429,19 +399,14 @@ header {
     transform: rotate(-90deg); }
   100% {
     -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-}
+    transform: rotate(90deg); } }
 @keyframes navigate {
   10% {
-    transform: rotate(0deg) translate(-5px, 0.5vh);
-  }
+    transform: rotate(0deg) translate(-5px, 0.5vh); }
   50% {
-    transform: rotate(-2deg) translate(-0.5vh, 5px);
-  }
-  25%, 75% {
-    transform: rotate(1deg) translate(5px, 0.5vh);
-  }
-}
+    transform: rotate(-2deg) translate(-0.5vh, 5px); }
+  25%,
+  75% {
+    transform: rotate(1deg) translate(5px, 0.5vh); } }
 
 /*# sourceMappingURL=style.min.css.map */

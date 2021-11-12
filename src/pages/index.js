@@ -15,7 +15,7 @@ import History from "../components/home/history";
 class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentPage: null, showModal: false };
+    this.state = { currentPage: null, showModal: false, blockScrollUp: false };
   }
 
   // static async getInitialProps() {
@@ -26,6 +26,13 @@ class Index extends React.Component {
 
   //   return { mainTabCategory };
   // }
+
+  componentDidMount = () => {
+    if (typeof window !== undefined) {
+      this.setState({ blockScrollUp: window.innerWidth < 768 });
+    }
+  };
+
   handleModal = () => {
     this.setState({ showModal: !this.state.showModal });
   };
@@ -52,6 +59,7 @@ class Index extends React.Component {
           onBeforePageScroll={this.handleBeforePageChange}
           customPageNumber={this.state.currentPage}
           renderAllPagesOnFirstRender={true}
+          blockScrollUp={this.state.blockScrollUp}
         >
           <div className="component center home-about" key="home-about">
             <div className="ellipse"></div>

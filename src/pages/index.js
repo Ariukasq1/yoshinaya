@@ -188,6 +188,7 @@ class Index extends React.Component {
 						</Container>
 					</div>
 					<div className="component center" key="home-map">
+						<div className="ellipse"></div>
 						<Map />
 						<div
 							className="icon-scroll-down"
@@ -198,35 +199,18 @@ class Index extends React.Component {
 						</div>
 					</div>
 					<div className="component center" key="home-special">
-						<Container className="relative">
-							<Grid
-								container
-								spacing={2}
-								alignItems="center"
-								justifyContent="center"
-							>
-								<Special />
-								<div
-									className="icon-scroll-down"
-									onClick={() => this.handlePageChange(4)}
-								>
-									<span>Scroll down</span>
-									<img src="/images/arrow-down.svg" alt="arrow down" />
-								</div>
-							</Grid>
-						</Container>
+						<div className="ellipse"></div>
+						<Special />
+						<div
+							className="icon-scroll-down"
+							onClick={() => this.handlePageChange(4)}
+						>
+							<span>Scroll down</span>
+							<img src="/images/arrow-down.svg" alt="arrow down" />
+						</div>
 					</div>
 					<div className="component center" key="home-AppCover">
-						<Container>
-							<Grid
-								container
-								spacing={2}
-								alignItems="center"
-								justifyContent="center"
-							>
-								<AppCover />
-							</Grid>
-						</Container>
+						<AppCover />
 					</div>
 				</ReactPageScroller>
 			</Layout>

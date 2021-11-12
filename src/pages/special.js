@@ -8,17 +8,18 @@ const Special = () => {
 	const saladEmoji = "/images/saladEmoji.svg";
 
 	return (
-		<div className="component center" key="home-special">
-			<div className="ellipse"></div>
-			<Container>
+		<Container className="relative">
+			<div className="content-special">
+				<div className="tag">
+					<p className="no-margin">Үүсэл хөгжил</p>
+				</div>
+				<div className="title">
+					<h1 className="title-margin">YOSHINOYA-н онцлог</h1>
+				</div>
+			</div>
+			<Grid container spacing={3} alignItems="center" justifyContent="center">
 				<Grid item xs={12} md={6}>
-					<div className="content-special">
-						<div className="tag">
-							<p className="no-margin">Үүсэл хөгжил</p>
-						</div>
-						<div className="title">
-							<h1 className="title-margin">YOSHINOYA-н онцлог</h1>
-						</div>
+					<div className="special-ramen">
 						<img src={ramen} alt="ramen" />
 					</div>
 				</Grid>
@@ -27,7 +28,7 @@ const Special = () => {
 						<div className="scroll-item">
 							<img src={likeEmoji} alt="like emoji" />
 							<div className="title-with-text">
-								<h3>Үйлчилгээ</h3>
+								<h6 className="no-margin">Үйлчилгээ</h6>
 								<p className="text no-margin">
 									1 – 2 bowl-г 60 секундэд, 3-с дээш bowl-г 3 минутанд багтаж
 									үйлчлэх ёстой.
@@ -37,7 +38,7 @@ const Special = () => {
 						<div className="scroll-item">
 							<img src={scaryEmoji} alt="scary emoji" />
 							<div className="title-with-text">
-								<h3>Өвөрмөц амт</h3>
+								<h6 className="no-margin">Өвөрмөц амт</h6>
 								<p className="text no-margin">
 									120 жилийн турш одоог хүртэл өөрчлөгдөөгүй, цорын ганц амт.
 								</p>
@@ -46,7 +47,7 @@ const Special = () => {
 						<div className="scroll-item">
 							<img src={saladEmoji} alt="salad emoji" />
 							<div className="title-with-text">
-								<h3>Эрүүл хоол</h3>
+								<h6 className="no-margin">Эрүүл хоол</h6>
 								<p className="text no-margin">
 									Бусад түргэн хоолны сүлжээ рестораны хоолтой харьцуулахад
 									хуурч, шараагүйгээрээ
@@ -56,7 +57,7 @@ const Special = () => {
 						<div className="scroll-item">
 							<img src={saladEmoji} alt="salad emoji" />
 							<div className="title-with-text">
-								<h3>Эрүүл хоол</h3>
+								<h6 className="no-margin">Эрүүл хоол</h6>
 								<p className="text no-margin">
 									Бусад түргэн хоолны сүлжээ рестораны хоолтой харьцуулахад
 									хуурч, шараагүйгээрээ
@@ -65,8 +66,8 @@ const Special = () => {
 						</div>
 					</div>
 				</Grid>
-			</Container>
-		</div>
+			</Grid>
+		</Container>
 	);
 };
 

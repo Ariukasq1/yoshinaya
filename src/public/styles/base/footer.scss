@@ -1,5 +1,7 @@
+@import "./variables.scss";
+
 .footer-container {
-	background-color: #ffff;
+	background-color: $color-white;
 	.content {
 		padding: 0 4rem;
 		.address-container {
@@ -14,8 +16,19 @@
 				display: flex;
 				justify-content: flex-end;
 				margin-bottom: 1.25rem;
-				img {
-					margin-left: 1.25rem;
+				a {
+					&:visited {
+						color: #616E7C;
+					}
+					svg {
+						text-align: center;
+						margin-left: 0.8rem;
+						cursor: pointer;
+						transition: ease-out 0.5s;
+						&:hover {
+							fill: $main-color;
+						}
+					}
 				}
 			}
 		}

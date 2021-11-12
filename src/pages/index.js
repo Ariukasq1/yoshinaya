@@ -1,15 +1,14 @@
 import WPAPI from "wpapi";
-import React from "react";
-// import Slider from "react-slick";
-import Layout from "../components/layouts/Layout";
 import Config from "../config";
+import React from "react";
+import Layout from "../components/layouts/Layout";
 import { Box, Button, Container, Fade, Grid, Modal } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
-import Slider from "react-slick";
-import Map from "./map";
 import Special from "./special";
 import AppCover from "./app-cover";
-import ProductItem from "../components/ProductItem";
+import Map from "../components/home/map";
+import Products from "../components/home/products";
+import History from "../components/home/history";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -22,9 +21,8 @@ class Index extends React.Component {
   // static async getInitialProps() {
   //   let apiMethod = wp.categories();
 
-  //   const mainTabCategory = await apiMethod
-  //     .parent(21)
-  //     .embed();
+  // static async getInitialProps() {
+  //   let apiMethod = wp.categories();
 
   //   return { mainTabCategory };
   // }
@@ -46,14 +44,6 @@ class Index extends React.Component {
 
   render() {
     const { loading } = this.props;
-    const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      padding: "1rem",
-    };
 
     return (
       <Layout loading={loading} title={"Yoshinaya"}>
@@ -73,7 +63,7 @@ class Index extends React.Component {
                 justifyContent="center"
               >
                 <Grid item xs={12} md={5}>
-                  <div className="">
+                  <div>
                     <div className="title">
                       <h1>Yoshinoya-н Товч танилцуулга</h1>
                       <p className="orange">Good, Easy, Fast</p>
@@ -146,67 +136,29 @@ class Index extends React.Component {
           <div className="component center home-products" key="home-products">
             <div className="ellipse"></div>
             <Container>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Grid item xs={12} md={4}>
-                  <div className="title">
-                    <div className="tag">Бүтээгдэхүүн</div>
-                    <h1>Хамгийн сайн амт чанарыг санал болгоно</h1>
-                    <Button variant="outlined">Бүх хоол харах</Button>
-                  </div>
-                  <div
-                    className="icon-scroll-down"
-                    onClick={() => this.handlePageChange(2)}
-                  >
-                    <span>Scroll down</span>
-                    <img src="/images/arrow-down.svg" alt="arrow down" />
-                  </div>
-                </Grid>
-                <Grid item xs={12} md={8}>
-                  <Slider {...settings}>
-                    <div>
-                      <ProductItem />
-                    </div>
-                    <div>
-                      <ProductItem />
-                    </div>
-                    <div>
-                      <ProductItem />
-                    </div>
-                    <div>
-                      <ProductItem />
-                    </div>
-                    <div>
-                      <ProductItem />
-                    </div>
-                  </Slider>
-                </Grid>
-              </Grid>
+              <Products handleChange={this.handlePageChange} />
             </Container>
           </div>
-          <div className="component center" key="home-map">
+          <div className="component center history" key="home-history">
             <div className="ellipse"></div>
             <Container>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Map />
-                <div
-                  className="icon-scroll-down"
-                  onClick={() => this.handlePageChange(3)}
-                >
-                  <span>Scroll down</span>
-                  <img src="/images/arrow-down.svg" alt="arrow down" />
-                </div>
-              </Grid>
+              <History handleChange={this.handlePageChange} />
             </Container>
+            <div className="section-shape-line">
+              <img
+                src="/images/Vector5.svg"
+                alt="vector"
+                className="section-shape-line"
+              />
+              <img
+                src="/images/Vector6.svg"
+                alt="vector"
+                className="section-shape-line"
+              />
+            </div>
+          </div>
+          <div className="component center" key="home-map">
+            <Map handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-special">
             <Container className="relative">

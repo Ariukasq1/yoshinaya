@@ -2,14 +2,13 @@
 
 .ellipse {
   position: absolute;
-  left: 60%;
+  left: 65%;
   right: -1%;
   top: -5.78%;
-  bottom: 44.16%;
+  bottom: 50.16%;
   background: radial-gradient(50% 50% at 50% 50%, #FF7800 0%, rgba(255, 120, 0, 0) 100%);
   opacity: 0.5;
   filter: blur(100px);
-
 }
 
 .component {
@@ -23,17 +22,6 @@
     justify-content: center;
     align-items: center;
   }
-}
-
-.section-shape {
-  position: absolute;
-  right: 0;
-  top: 0%;
-  left: 0;
-  bottom: 2rem;
-  opacity: 0.9;
-  animation: rotatedHalfTwo 10s alternate infinite linear;
-  z-index: -1;
 }
 
 .section-shape {
@@ -56,6 +44,23 @@
     top: 0%;
     left: 0px;
     animation: rotatedHalfTwo 12s alternate infinite linear;
+  }
+}
+
+.section-shape-line {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 10vh;
+  opacity: 0.9;
+  z-index: -1;
+
+  img {
+    animation: navigate 10s infinite linear;
+
+    &:first-child {
+      animation: navigate 15s infinite linear;
+    }
   }
 }
 
@@ -140,13 +145,7 @@
 }
 
 .home-products {
-  .slick-list {
-    margin: 0 -0.5rem;
-  }
 
-  .slick-slide>div {
-    padding: 0 0.5rem;
-  }
 
   .MuiCard-root.product-item {
     box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
@@ -184,6 +183,28 @@
   }
 }
 
+.history-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 0;
+  width: 100%;
+
+  h4 {
+    color: $text-secondary-color;
+    font-weight: 700;
+  }
+}
+
+.slick-list {
+  margin: 0 -0.5rem;
+}
+
+.slick-slide>div {
+  padding: 0 0.5rem;
+}
+
 @-webkit-keyframes rotatedHalfTwo {
   0% {
     -webkit-transform: rotate(-90deg);
@@ -205,5 +226,33 @@
   100% {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+}
+
+// @keyframes moves {
+//   to {
+//     background-position: -100vw 80%;
+//   }
+// }
+
+// img {
+//   margin: auto;
+//   max-height: 50vh;
+//   animation: navigate 2s infinite;
+// }
+
+@keyframes navigate {
+
+  10% {
+    transform: rotate(0deg) translate(-5px, 0.5vh);
+  }
+
+  50% {
+    transform: rotate(-2deg) translate(-0.5vh, 5px);
+  }
+
+  25%,
+  75% {
+    transform: rotate(1deg) translate(5px, 0.5vh);
   }
 }

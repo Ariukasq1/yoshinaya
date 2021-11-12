@@ -1,5 +1,6 @@
 @import "./base/variables.scss";
 
+// background pattern
 .background-image {
 	background-image: url("/images/backgroundPattern.svg");
 	background-repeat: no-repeat;
@@ -9,6 +10,15 @@
 		margin: 1.12rem 0;
 	}
 }
+
+// special js
+
+// .title {
+// 	font-size: 58px;
+// 	line-height: 67.97px;
+// 	letter-spacing: -0.5px;
+// 	color: $text-secondary-color;
+// }
 
 .scroll-container {
 	overflow-y: scroll;
@@ -44,5 +54,21 @@
 				margin-bottom: 1.06rem;
 			}
 		}
+	}
+}
+
+// app-cover.js
+.background-style {
+	background-color: $background-color;
+	width: 100%;
+	height: 400px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-self: space-evenly;
+
+	.app-cover-img {
+		position: absolute;
+		top: -20%;
 	}
 }

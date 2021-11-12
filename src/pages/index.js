@@ -1,12 +1,15 @@
 import WPAPI from "wpapi";
 import React from "react";
+// import Slider from "react-slick";
 import Layout from "../components/layouts/Layout";
 import Config from "../config";
 import { Box, Button, Container, Fade, Grid, Modal } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
+import Slider from "react-slick";
 import Map from "./map";
 import Special from "./special";
 import AppCover from "./app-cover";
+import ProductItem from "../components/ProductItem";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -43,6 +46,14 @@ class Index extends React.Component {
 
   render() {
     const { loading } = this.props;
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      padding: "1rem",
+    };
 
     return (
       <Layout loading={loading} title={"Yoshinaya"}>
@@ -131,7 +142,8 @@ class Index extends React.Component {
               </Grid>
             </Container>
           </div>
-          <div className="component center" key="home-products">
+          <div className="component center home-products" key="home-products">
+            <div className="ellipse"></div>
             <Container>
               <Grid
                 container
@@ -154,18 +166,23 @@ class Index extends React.Component {
                   </div>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <div className="relative" align="center">
-                    <img src="/images/leaf.svg" alt="" className="shape-leaf" />
-                    <div className="section-shape">
-                      <img src="/images/Vector2.svg" alt="vector2" />
+                  <Slider {...settings}>
+                    <div>
+                      <ProductItem />
                     </div>
-                    <img src="/images/ramen.png" alt="" />
-                    <img
-                      src="/images/tomato.svg"
-                      alt="shape-tomato"
-                      className="shape-tomato"
-                    />
-                  </div>
+                    <div>
+                      <ProductItem />
+                    </div>
+                    <div>
+                      <ProductItem />
+                    </div>
+                    <div>
+                      <ProductItem />
+                    </div>
+                    <div>
+                      <ProductItem />
+                    </div>
+                  </Slider>
                 </Grid>
               </Grid>
             </Container>

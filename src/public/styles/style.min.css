@@ -158,7 +158,7 @@ header .tool-bar .nav-links .menu-btn {
 }
 
 .footer-container {
-  background-color: #ffff;
+  background-color: #fff;
 }
 .footer-container .content {
   padding: 0 4rem;
@@ -177,17 +177,23 @@ header .tool-bar .nav-links .menu-btn {
   justify-content: flex-end;
   margin-bottom: 1.25rem;
 }
-.footer-container .content .address-container .icons img {
-  margin-left: 1.25rem;
+.footer-container .content .address-container .icons a:visited {
+  color: #616E7C;
+}
+.footer-container .content .address-container .icons a svg {
+  text-align: center;
+  margin-left: 0.8rem;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+}
+.footer-container .content .address-container .icons a svg:hover {
+  fill: #FF7800;
 }
 
-.background-image {
-  background-image: url("/images/backgroundPattern.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-}
-.background-image .title-margin {
-  margin: 1.12rem 0;
+.special-ramen {
+  width: 284px;
+  height: 284px;
+  margin: auto;
 }
 
 .scroll-container {
@@ -209,20 +215,23 @@ header .tool-bar .nav-links .menu-btn {
 }
 .scroll-container .scroll-item {
   display: flex;
-  margin: 3.6rem 0;
+  margin: 1.5rem 0;
 }
 .scroll-container .scroll-item img {
-  align-self: flex-start;
+  width: 90px;
+  height: 90px;
 }
 .scroll-container .scroll-item .title-with-text {
   margin-left: 2.3rem;
+  margin-top: 1rem;
 }
-.scroll-container .scroll-item .title-with-text h3 {
+.scroll-container .scroll-item .title-with-text h6 {
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.15px;
   color: #1F2933;
   margin-bottom: 1.06rem;
+  font-weight: bold;
 }
 
 .background-style {
@@ -232,7 +241,20 @@ header .tool-bar .nav-links .menu-btn {
   display: flex;
   position: relative;
   align-items: center;
-  justify-self: space-evenly;
+  border-radius: 8px;
+}
+.background-style .app-content {
+  padding-left: 5rem;
+}
+.background-style .app-content h2 {
+  font-size: 2.1rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.25px;
+  color: #1F2933;
+}
+.background-style .app-content .store-images img {
+  margin-right: 1rem;
+  cursor: pointer;
 }
 .background-style .app-cover-img {
   position: absolute;

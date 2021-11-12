@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../components/layouts/Layout";
 import { Box, Button, Container, Fade, Grid, Modal } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
-import Special from "./special";
+import Special from "../components/home/special";
 import AppCover from "./app-cover";
 import Map from "../components/home/map";
 import Products from "../components/home/products";
@@ -161,35 +161,11 @@ class Index extends React.Component {
             <Map handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-special">
-            <Container className="relative">
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Special />
-                <div
-                  className="icon-scroll-down"
-                  onClick={() => this.handlePageChange(4)}
-                >
-                  <span>Scroll down</span>
-                  <img src="/images/arrow-down.svg" alt="arrow down" />
-                </div>
-              </Grid>
-            </Container>
+            <div className="ellipse"></div>
+            <Special handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-AppCover">
-            <Container>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <AppCover />
-              </Grid>
-            </Container>
+            <AppCover />
           </div>
         </ReactPageScroller>
       </Layout>

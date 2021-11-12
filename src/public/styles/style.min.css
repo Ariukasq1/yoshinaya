@@ -233,6 +233,23 @@ hr {
   margin-bottom: 1.06rem;
 }
 
+.background-style {
+  background-color: #ff78001f;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+}
+.background-style .app-cover-img {
+  position: absolute;
+  top: -30%;
+  z-index: 3;
+}
+
 .component {
   height: 100%;
   width: 100%;

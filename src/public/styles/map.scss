@@ -12,6 +12,14 @@
 }
 
 // special js
+
+// .title {
+// 	font-size: 58px;
+// 	line-height: 67.97px;
+// 	letter-spacing: -0.5px;
+// 	color: $text-secondary-color;
+// }
+
 .scroll-container {
 	overflow-y: scroll;
 	height: 500px;
@@ -56,14 +64,11 @@
 	height: 400px;
 	display: flex;
 	position: relative;
-	z-index: 0;
-	overflow: hidden;
-	justify-items: center;
 	align-items: center;
+	justify-self: space-evenly;
 
 	.app-cover-img {
 		position: absolute;
-		top: -30%;
-		z-index: 3;
+		top: -20%;
 	}
 }

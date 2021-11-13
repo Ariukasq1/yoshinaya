@@ -40,7 +40,7 @@ class History extends React.Component {
           </Slider>
           <div
             className="icon-scroll-down"
-            onClick={() => this.props.handleChange(3)}
+            onClick={() => this.props.handleChange(4)}
           >
             <span>Scroll down</span>
             <img src="/images/arrow-down.svg" alt="arrow down" />

@@ -9,6 +9,7 @@ import AppCover from "./app-cover";
 import Map from "../components/home/map";
 import Products from "../components/home/products";
 import History from "../components/home/history";
+import Revolution from "../components/home/revolution";
 
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -147,6 +148,12 @@ class Index extends React.Component {
               <Products handleChange={this.handlePageChange} />
             </Container>
           </div>
+          <div className="component center home-revolution">
+            <div className="ellipse"></div>
+            <Container>
+              <Revolution handleChange={this.handlePageChange} />
+            </Container>
+          </div>
           <div className="component center history" key="home-history">
             <div className="ellipse"></div>
             <Container>
@@ -166,6 +173,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="component center" key="home-map">
+            <div className="ellipse"></div>
             <Map handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-special">

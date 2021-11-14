@@ -29,19 +29,16 @@
 		display: flex;
 		margin: 1.5rem 0;
 		img {
-			width: 90px;
-			height: 90px;
+			width: 73px;
+			height: 73px;
 		}
 		.title-with-text {
 			margin-left: 2.3rem;
 			margin-top: 1rem;
 			h6 {
-				font-size: 20px;
-				line-height: 28px;
-				letter-spacing: 0.15px;
+				font-size: 18px;
 				color: $text-secondary-color;
 				margin-bottom: 1.06rem;
-				font-weight: bold;
 			}
 		}
 	}
@@ -59,11 +56,11 @@
 
 	.app-content {
 		padding-left: 5rem;
-
+		padding-top: 3.5rem;
+		align-self: flex-start;
 		h2 {
-			font-size: 2.1rem;
-			line-height: 2.8rem;
-			letter-spacing: 0.25px;
+			font-size: 1.9rem;
+			line-height: 1.3;
 			color: $text-secondary-color;
 		}
 

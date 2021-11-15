@@ -9,9 +9,37 @@ class History extends React.Component {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      delay: 0,
+      slidesToShow: 4,
       slidesToScroll: 1,
       padding: "1rem",
+      // autoplay: ,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 899,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
     };
     return (
       <Grid container spacing={2} alignItems="center" justifyContent="center">
@@ -40,7 +68,7 @@ class History extends React.Component {
           </Slider>
           <div
             className="icon-scroll-down"
-            onClick={() => this.props.handleChange(3)}
+            onClick={() => this.props.handleChange(4)}
           >
             <span>Scroll down</span>
             <img src="/images/arrow-down.svg" alt="arrow down" />

@@ -1,0 +1,19 @@
+$breakpoint: (
+  xs: "376px",
+  sm: "576px",
+  md: "768px",
+  lg: "992px",
+  xl: "1200px",
+  xxl: "1400px",
+  xxxl: "1600px",
+);
+
+@mixin mq($canvas) {
+  @each $name, $bp in $breakpoint {
+    @if $canvas == $name {
+      @media only screen and (max-width: $bp) {
+        @content;
+      }
+    }
+  }
+}

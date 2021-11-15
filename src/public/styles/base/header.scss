@@ -1,34 +1,87 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 header {
-    border-bottom: 1px solid;
-    border-color: #00000014;
+  border-bottom: 1px solid;
+  border-color: #00000014;
 
-
-    .tool-bar {
-        display: flex;
-        justify-content: space-between;
-        // height: 100px;
-        width: 100%;
-        padding: 0;
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-
-            span {
-                margin-right: 24px;
-                color: $text-color;
-            }
-
-            .menu-btn {
-                border-radius: 8px;
-                text-transform: none;
-                font-weight: bold;
-                padding: 10px 24px;
-                margin-left: 24px;
-                box-shadow: -8px 10px 34px -5px rgba(255, 120, 0, 0.36);
-            }
-        }
+  .tool-bar {
+    display: flex;
+    justify-content: space-between;
+    // height: 100px;
+    width: 100%;
+    padding: 0;
+    &__menu {
+      color: $main-color;
+      line-height: 0;
+      svg {
+        font-size: 2.5em;
+      }
     }
+    &__image {
+      &.-desktop {
+        @include mq(xl) {
+          display: none;
+        }
+      }
+      &.-mobile {
+        display: none;
+        width: 45px;
+        @include mq(xl) {
+          display: inline-block;
+        }
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 24px;
+        color: $text-color;
+      }
+
+      .menu-btn {
+        border-radius: 8px;
+        text-transform: none;
+        font-weight: bold;
+        padding: 10px 24px;
+        margin-left: 24px;
+        box-shadow: -8px 10px 34px -5px rgba(255, 120, 0, 0.36);
+      }
+
+      @include mq(xl) {
+        display: none;
+      }
+    }
+  }
+}
+.menu-drawer {
+  .MuiPaper-root {
+    width: 300px;
+    max-width: 90%;
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__e1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__e2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__close {
+    color: $main-color;
+    display: flex;
+    padding: 10px;
+    svg {
+      font-size: 2.5em;
+    }
+  }
 }

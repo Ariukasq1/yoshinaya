@@ -5,7 +5,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
-	const yoshinoyaLogo = "/images/YoshinoyaLogo.svg";
+  const yoshinoyaLogo = "/images/YoshinoyaLogo.svg";
 
 	return (
 		<Container>

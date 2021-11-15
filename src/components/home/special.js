@@ -11,7 +11,7 @@ class Special extends React.Component {
       <Container className="relative">
         <div
           className="icon-scroll-down"
-          onClick={() => this.props.handleChange(5)}
+          onClick={() => this.props.handleChange(6)}
         >
           <span>Scroll down</span>
           <img src="/images/arrow-down.svg" alt="arrow down" />
@@ -27,7 +27,18 @@ class Special extends React.Component {
         <Grid container spacing={3} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={6}>
             <div className="special-ramen">
-              <img src={ramen} alt="ramen" />
+              <div className="relative" align="center">
+                <img src="/images/leaf.svg" alt="" className="shape-leaf" />
+                <div className="section-shape relative">
+                  <img src="/images/Vector2.svg" alt="vector2" />
+                </div>
+                <img src="/images/ramen.png" alt="" />
+                <img
+                  src="/images/tomato.svg"
+                  alt="shape-tomato"
+                  className="shape-tomato"
+                />
+              </div>
             </div>
           </Grid>
           <Grid item xs={12} md={5}>

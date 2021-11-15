@@ -63,8 +63,19 @@ const Menu = () => {
         open={isMenuOpen}
         anchor="right"
         onClose={() => setIsMenuOpen(false)}
+        className="menu-drawer"
       >
-        hi
+        <div className="menu-drawer__inner">
+          <img src="/images/ellipse-1.png" alt="" className="menu-drawer__e1" />
+          <img src="/images/ellipse-2.png" alt="" className="menu-drawer__e2" />
+          {/* <div className="menu-drawer__close">
+            <CloseRounded />
+            <p>Хаах</p>
+          </div> */}
+          <Button variant="text" startIcon={<CloseRounded />}>
+            Хаах
+          </Button>
+        </div>
       </Drawer>
     </>
   );

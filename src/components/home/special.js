@@ -29,7 +29,7 @@ class Special extends React.Component {
             <div className="special-ramen">
               <div className="relative" align="center">
                 <img src="/images/leaf.svg" alt="" className="shape-leaf" />
-                <div className="section-shape">
+                <div className="section-shape relative">
                   <img src="/images/Vector2.svg" alt="vector2" />
                 </div>
                 <img src="/images/ramen.png" alt="" />

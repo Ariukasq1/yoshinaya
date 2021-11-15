@@ -227,19 +227,9 @@ header .tool-bar .nav-links .menu-btn {
 .scroll-container {
   overflow-y: scroll;
   height: 500px;
-  transition: all 1s;
-}
-.scroll-container::-webkit-scrollbar {
-  width: 2px;
-}
-.scroll-container::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
-}
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: #FF7800;
-}
-.scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #00000014;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: #FF7800 #F5F5F5;
+  scrollbar-width: thin;
 }
 .scroll-container .scroll-item {
   display: flex;
@@ -257,6 +247,19 @@ header .tool-bar .nav-links .menu-btn {
   font-size: 18px;
   color: #1F2933;
   margin-bottom: 1.06rem;
+}
+
+.scroll-chrome::-webkit-scrollbar {
+  width: 2px;
+}
+.scroll-chrome::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+.scroll-chrome::-webkit-scrollbar-thumb {
+  background-color: #FF7800;
+}
+.scroll-chrome::-webkit-scrollbar-thumb:hover {
+  background: #00000014;
 }
 
 .background-style {

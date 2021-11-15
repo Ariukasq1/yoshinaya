@@ -31,7 +31,7 @@ class Special extends React.Component {
             </div>
           </Grid>
           <Grid item xs={12} md={5}>
-            <div className="scroll-container">
+            <div className="scroll-container scroll-chrome y-mandatory">
               <div className="scroll-item">
                 <img src={likeEmoji} alt="like emoji" />
                 <div className="title-with-text">

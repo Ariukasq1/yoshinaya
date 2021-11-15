@@ -10,10 +10,13 @@ class History extends React.Component {
       infinite: true,
       speed: 500,
       delay: 0,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
       padding: "1rem",
-      // autoplay: ,
+      autoplay: true,
+      speed: 500,
+      centerMode: true,
+      autoplaySpeed: 2000,
       responsive: [
         {
           breakpoint: 1024,

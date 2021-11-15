@@ -6,11 +6,9 @@
   right: -1%;
   top: -5.78%;
   bottom: 50.16%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #ff7800 0%,
-    rgba(255, 120, 0, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%,
+      #ff7800 0%,
+      rgba(255, 120, 0, 0) 100%);
   opacity: 0.5;
   filter: blur(100px);
   z-index: -1;
@@ -189,6 +187,10 @@
 
 .home-revolution .img {
   max-height: 40vh;
+  object-fit: contain;
+  object-position: right;
+  float: right;
+
 }
 
 .history-item {
@@ -211,6 +213,7 @@
   // width: 100%;
   // left: 0;
   padding-bottom: 10vh;
+
   &__container {
     position: relative;
     height: 100%;
@@ -230,9 +233,10 @@
 
 .slick-list {
   margin: 0 -0.5rem;
+  padding: 0 8% 0 0 !important;
 }
 
-.slick-slide > div {
+.slick-slide>div {
   padding: 0 0.5rem;
 }
 

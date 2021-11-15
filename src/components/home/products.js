@@ -8,10 +8,12 @@ class Products extends React.Component {
     const settings = {
       dots: false,
       infinite: true,
+      autoplay: true,
       speed: 500,
+      autoplaySpeed: 2000,
       slidesToShow: 3,
       slidesToScroll: 1,
-      padding: "1rem",
+      centerMode: true,
       responsive: [
         {
           breakpoint: 1024,

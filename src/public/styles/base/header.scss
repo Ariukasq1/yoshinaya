@@ -10,22 +10,28 @@ header {
     // height: 100px;
     width: 100%;
     padding: 0;
+
     &__menu {
+      display: none;
       color: $main-color;
       line-height: 0;
+
       svg {
         font-size: 2.5em;
       }
     }
+
     &__image {
       &.-desktop {
         @include mq(xl) {
           display: none;
         }
       }
+
       &.-mobile {
         display: none;
         width: 45px;
+
         @include mq(xl) {
           display: inline-block;
         }

@@ -108,11 +108,7 @@ hr {
 }
 
 .text {
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 0.5px;
   color: #616E7C;
-  max-width: 85%;
 }
 
 .tag {
@@ -152,6 +148,7 @@ header .tool-bar {
   padding: 0;
 }
 header .tool-bar__menu {
+  display: none;
   color: #FF7800;
   line-height: 0;
 }
@@ -256,14 +253,14 @@ header .tool-bar .nav-links .menu-btn {
   }
 }
 .special-ramen {
-  width: 284px;
-  height: 284px;
+  max-height: 25vh;
+  max-width: 25vw;
   margin: auto;
 }
 
 .scroll-container {
   overflow-y: scroll;
-  height: 500px;
+  height: 50vh;
   transition: all 1s;
 }
 .scroll-container::-webkit-scrollbar {
@@ -488,6 +485,9 @@ header .tool-bar .nav-links .menu-btn {
 
 .home-revolution .img {
   max-height: 40vh;
+  object-fit: contain;
+  object-position: right;
+  float: right;
 }
 
 .history-item {
@@ -523,6 +523,7 @@ header .tool-bar .nav-links .menu-btn {
 
 .slick-list {
   margin: 0 -0.5rem;
+  padding: 0 8% 0 0 !important;
 }
 
 .slick-slide > div {

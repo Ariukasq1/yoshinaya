@@ -12,6 +12,32 @@ class Products extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       padding: "1rem",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 899,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1.5,
+          },
+        },
+      ],
     };
     return (
       <Grid container spacing={2} alignItems="center" justifyContent="center">

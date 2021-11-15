@@ -146,6 +146,10 @@ header {
         header .tool-bar .nav-links {
           display: none; } }
 
+.menu-drawer {
+  width: 300px;
+  max-width: 90%; }
+
 .footer-container {
   background-color: #fff; }
   .footer-container .content {

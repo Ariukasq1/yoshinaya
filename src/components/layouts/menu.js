@@ -58,7 +58,10 @@ const Menu = () => {
         anchor="right"
         onClose={() => setIsMenuOpen(false)}
       >
-        hi
+        <div className="menu-drawer">
+          <img src="/images/ellipse-1.png" alt="" className="menu-drawer__e1" />
+          <img src="/images/ellipse-2" alt="" className="menu-drawer__e2" />
+        </div>
       </Drawer>
     </>
   );

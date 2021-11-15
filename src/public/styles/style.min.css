@@ -63,6 +63,14 @@ hr {
   margin: 0 !important;
 }
 
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
 .no-margin {
   margin: 0;
 }
@@ -105,10 +113,6 @@ hr {
 
 .relative {
   position: relative;
-}
-
-.text {
-  color: #616E7C;
 }
 
 .tag {
@@ -238,18 +242,54 @@ header .tool-bar .nav-links .menu-btn {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+.footer-container .content .address-container .icons a {
+  position: relative;
+  display: inline-block;
+  color: #616E7C;
 }
 .footer-container .content .address-container .icons a:visited {
   color: #616E7C;
 }
 .footer-container .content .address-container .icons a svg {
   text-align: center;
-  margin-left: 0.8rem;
   cursor: pointer;
-  transition: ease-out 0.5s;
+  transition: ease-out 0.3s;
 }
-.footer-container .content .address-container .icons a svg:hover {
-  fill: #FF7800;
+.footer-container .content .address-container .icons .facebook-link:hover {
+  color: #3c5b99;
+}
+.footer-container .content .address-container .icons .twitter-link:hover {
+  color: #55adee;
+}
+.footer-container .content .address-container .icons .instagram-link .bg {
+  width: calc(100% - 1px);
+  background: #000;
+  display: block;
+}
+.footer-container .content .address-container .icons .instagram-link .bg::before {
+  content: "";
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.footer-container .content .address-container .icons .instagram-link .bg .inner {
+  background: #fcfcfc;
+  mix-blend-mode: screen;
+  display: block;
+  width: 25px;
+}
+.footer-container .content .address-container .icons .instagram-link:hover .bg::before {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 767px) {
@@ -281,15 +321,25 @@ header .tool-bar .nav-links .menu-btn {
   }
 }
 .special-ramen {
-  max-height: 25vh;
+  max-height: 100%;
   max-width: 25vw;
   margin: auto;
+}
+.special-ramen .section-shape:before {
+  display: none;
+}
+.special-ramen .shape-tomato,
+.special-ramen .shape-leaf {
+  width: 5rem;
 }
 
 .scroll-container {
   overflow-y: scroll;
   height: 50vh;
   transition: all 1s;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: #FF7800 #F5F5F5;
+  scrollbar-width: thin;
 }
 .scroll-container::-webkit-scrollbar {
   width: 2px;
@@ -308,20 +358,30 @@ header .tool-bar .nav-links .menu-btn {
   margin: 1.5rem 0;
 }
 .scroll-container .scroll-item img {
-  width: 90px;
-  height: 90px;
+  width: 73px;
+  height: 73px;
 }
 .scroll-container .scroll-item .title-with-text {
   margin-left: 2.3rem;
   margin-top: 1rem;
 }
-.scroll-container .scroll-item .title-with-text h6 {
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.15px;
+.scroll-container .scroll-item .title-with-text h4 {
+  letter-spacing: 0;
   color: #1F2933;
   margin-bottom: 1.06rem;
-  font-weight: bold;
+}
+
+.scroll-chrome::-webkit-scrollbar {
+  width: 2px;
+}
+.scroll-chrome::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+.scroll-chrome::-webkit-scrollbar-thumb {
+  background-color: #FF7800;
+}
+.scroll-chrome::-webkit-scrollbar-thumb:hover {
+  background: #00000014;
 }
 
 .background-style {
@@ -335,11 +395,12 @@ header .tool-bar .nav-links .menu-btn {
 }
 .background-style .app-content {
   padding-left: 5rem;
+  padding-top: 3.5rem;
+  align-self: flex-start;
 }
 .background-style .app-content h2 {
-  font-size: 2.1rem;
-  line-height: 2.8rem;
-  letter-spacing: 0.25px;
+  font-size: 1.9rem;
+  line-height: 1.3;
   color: #1F2933;
 }
 .background-style .app-content .store-images img {
@@ -474,11 +535,22 @@ header .tool-bar .nav-links .menu-btn {
   text-align: center;
   bottom: 1rem;
   color: #cbd2d9;
-  letter-spacing: 0.5;
+  letter-spacing: 0.5px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .icon-scroll-down img {
   margin: auto;
   width: 40px;
+  -moz-animation: bounce 1.2s infinite;
+  -webkit-animation: bounce 1.2s infinite;
+  animation: bounce 1.2s infinite;
+}
+.icon-scroll-down:hover {
+  color: #989fa7;
+  cursor: pointer;
 }
 
 .home-products .MuiCard-root.product-item {
@@ -587,6 +659,20 @@ header .tool-bar .nav-links .menu-btn {
   }
   25%, 75% {
     transform: rotate(1deg) translate(5px, 0.5vh);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(2px);
   }
 }
 

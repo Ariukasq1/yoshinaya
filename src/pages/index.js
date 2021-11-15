@@ -154,6 +154,7 @@ class Index extends React.Component {
               <Revolution handleChange={this.handlePageChange} />
             </Container>
           </div>
+
           <div className="component center history" key="home-history">
             <div className="ellipse"></div>
             <div className="overflow-right component center">

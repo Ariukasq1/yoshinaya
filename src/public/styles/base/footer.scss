@@ -16,18 +16,80 @@
 				display: flex;
 				justify-content: flex-end;
 				margin-bottom: 1.25rem;
+				gap: 1rem;
 				a {
+					position: relative;
+					display: inline-block;
+					color: #616E7C;
 					&:visited {
 						color: #616E7C;
 					}
 					svg {
 						text-align: center;
-						margin-left: 0.8rem;
 						cursor: pointer;
-						transition: ease-out 0.5s;
-						&:hover {
-							fill: $main-color;
+						transition: ease-out 0.3s;
+					}
+				}
+				.facebook-link {
+					&:hover {
+						color: #3c5b99;
+					}
+				}
+				.twitter-link {
+					&:hover {
+						color: #55adee;
+					}
+				}
+				.instagram-link {
+					.bg {
+						width: calc(100% - 1px);
+						background: #000;
+						display: block;
+						&::before {
+							content: "";
+							background: -moz-linear-gradient(
+								45deg,
+								#f09433 0%,
+								#e6683c 25%,
+								#dc2743 50%,
+								#cc2366 75%,
+								#bc1888 100%
+							);
+							background: -webkit-linear-gradient(
+								45deg,
+								#f09433 0%,
+								#e6683c 25%,
+								#dc2743 50%,
+								#cc2366 75%,
+								#bc1888 100%
+							);
+							background: linear-gradient(
+								45deg,
+								#f09433 0%,
+								#e6683c 25%,
+								#dc2743 50%,
+								#cc2366 75%,
+								#bc1888 100%
+							);
+							display: block;
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: 100%;
+							width: 100%;
+							opacity: 0;
+							transition: 0.3s ease-in-out;
 						}
+						.inner {
+							background: #fcfcfc;
+							mix-blend-mode: screen;
+							display: block;
+							width: 25px;
+						}
+					}
+
+					&:hover .bg::before {
+						opacity: 1;
 					}
 				}
 			}

@@ -10,7 +10,7 @@ const AppCover = () => {
     <Container className="appcover">
       <Grid container spacing={2} alignItems="center" justifyContent="center">
         <div className="background-style">
-          <Grid item xs={12} md={6} className="app-content">
+          <Grid item xs={12} md={7} className="app-content">
             <h2>
               Та манай аппликейшиныг татсанаар олон онцгой боломжууд хүлээж
               байна.
@@ -20,7 +20,7 @@ const AppCover = () => {
               <img src={playStore} alt="play store" />
             </div>
           </Grid>
-          <Grid item sx={12} md={7}>
+          <Grid item sx={12} md={5}>
             <img
               src={appPhone}
               alt="application phone"

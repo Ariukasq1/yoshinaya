@@ -13,15 +13,20 @@ header {
     &__menu {
       color: $main-color;
       line-height: 0;
+      cursor: pointer;
       svg {
         font-size: 2.5em;
+      }
+      display: none;
+      @include mq(lg) {
+        display: block;
       }
     }
     &__image {
       // &.-desktop {
       //   @include mq(xl) {
       //     display: none;
-      //   }
+      //   }Хоолны цэс
       // }
       // &.-mobile {
       //   display: none;
@@ -59,13 +64,17 @@ header {
 
 .menu-drawer {
   .MuiPaper-root {
-    width: 300px;
-    max-width: 90%;
+    width: 100%;
+    max-width: 95%;
   }
   &__inner {
+    max-width: 100%;
+    overflow: hidden;
     width: 100%;
     height: 100%;
     position: relative;
+    padding: 8px 16px;
+    box-sizing: border-box;
   }
   &__e1 {
     position: absolute;
@@ -81,8 +90,73 @@ header {
     color: $main-color;
     display: flex;
     padding: 10px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
     svg {
-      font-size: 2.5em;
+      font-size: 2em !important;
+    }
+    &__text {
+      font-size: 1.2em !important;
+    }
+  }
+  &__menu {
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &__item {
+      color: $text-color;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 16px 0;
+      &:first-child {
+        margin-top: 16px;
+      }
+      &:hover {
+        color: $main-color;
+      }
+      &.-active {
+        color: $main-color;
+      }
+    }
+  }
+
+  &__search {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    border-bottom: 0.01em solid rgba($color: $text-color, $alpha: 0.4);
+
+    &__container {
+      position: relative;
+      width: 100%;
+      width: 100%;
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 50px;
+      }
+    }
+    &.-focus {
+      border-bottom: 2px solid $main-color;
+      // box-shadow: 0px 8px 20px rgba(255, 120, 0, 0.24),
+      //   0px 2px 6px rgba(255, 120, 0, 0.16), 0px 0px 1px rgba(255, 120, 0, 0.08);
+    }
+  }
+  &__close-btn {
+    height: 64px;
+    width: 64px;
+    margin-top: 64px;
+    box-shadow: 0px 16px 40px rgba(255, 120, 0, 0.24),
+      0px 4px 12px rgba(255, 120, 0, 0.16), 0px 0px 2px rgba(255, 120, 0, 0.08);
+    svg {
+      font-size: 2.4rem !important;
     }
   }
 }

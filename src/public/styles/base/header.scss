@@ -18,7 +18,7 @@ header {
         font-size: 2.5em;
       }
       display: none;
-      @include mq(lg) {
+      @include mq(xl) {
         display: block;
       }
     }

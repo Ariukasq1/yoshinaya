@@ -8,27 +8,27 @@
       .icon-scroll-down {
         display: none;
       }
-      // & > div {
-      //   height: initial !important;
+      & > div {
+        height: initial !important;
 
-      //   .component {
-      //     padding: 2rem 0;
-      //     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-      //     min-height: 90vh;
+        .component {
+          padding: 2rem 1rem;
 
-      //     &:first-child {
-      //       padding-top: 0;
-      //     }
+          min-height: calc(100vh - 60px);
 
-      //     .arrow-wrapper {
-      //       justify-content: flex-end;
+          &:first-child {
+            padding-top: 0;
+          }
 
-      //       .custom-arrow {
-      //         bottom: 1rem;
-      //       }
-      //     }
-      //   }
-      // }
+          .arrow-wrapper {
+            justify-content: flex-end;
+
+            .custom-arrow {
+              bottom: 1rem;
+            }
+          }
+        }
+      }
     }
   }
 }

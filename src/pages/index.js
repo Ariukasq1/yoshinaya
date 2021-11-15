@@ -10,7 +10,7 @@ import Map from "../components/home/map";
 import Products from "../components/home/products";
 import History from "../components/home/history";
 import Revolution from "../components/home/revolution";
-
+import Footer from "../components/layouts/footer";
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
 class Index extends React.Component {
@@ -54,7 +54,7 @@ class Index extends React.Component {
     const { loading } = this.props;
 
     return (
-      <Layout loading={loading} title={"Yoshinaya"}>
+      <Layout loading={loading} title={"Yoshinaya"} haveFooter={false}>
         <ReactPageScroller
           pageOnChange={this.handlePageChange}
           onBeforePageScroll={this.handleBeforePageChange}
@@ -144,9 +144,9 @@ class Index extends React.Component {
           </div>
           <div className="component center home-products" key="home-products">
             <div className="ellipse"></div>
-            <Container>
+            <div className="overflow-right component center">
               <Products handleChange={this.handlePageChange} />
-            </Container>
+            </div>
           </div>
           <div className="component center home-revolution">
             <div className="ellipse"></div>
@@ -156,9 +156,9 @@ class Index extends React.Component {
           </div>
           <div className="component center history" key="home-history">
             <div className="ellipse"></div>
-            <Container>
+            <div className="overflow-right component center">
               <History handleChange={this.handlePageChange} />
-            </Container>
+            </div>
             <div className="section-shape-line">
               <img
                 src="/images/Vector5.svg"
@@ -181,7 +181,10 @@ class Index extends React.Component {
             <Special handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-AppCover">
-            <AppCover />
+            <div className="appcover__container">
+              <AppCover />
+              <Footer />
+            </div>
           </div>
         </ReactPageScroller>
       </Layout>

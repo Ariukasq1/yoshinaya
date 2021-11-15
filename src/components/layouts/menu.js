@@ -24,11 +24,11 @@ const Menu = () => {
               alt="Yoshinoya logo"
               className="tool-bar__image -desktop"
             />
-            <img
+            {/* <img
               src={yoshiMobile}
               alt="Yoshinoya logo"
               className="tool-bar__image -mobile"
-            />
+            /> */}
             <div className="nav-links">
               <span>Нүүр хуудас</span>
               <span>Бидний тухай</span>

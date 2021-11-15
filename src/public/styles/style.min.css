@@ -129,15 +129,6 @@ header {
       line-height: 0; }
       header .tool-bar__menu svg {
         font-size: 2.5em; }
-    @media only screen and (max-width: 1200px) {
-      header .tool-bar__image.-desktop {
-        display: none; } }
-    header .tool-bar__image.-mobile {
-      display: none;
-      width: 45px; }
-      @media only screen and (max-width: 1200px) {
-        header .tool-bar__image.-mobile {
-          display: inline-block; } }
     header .tool-bar .nav-links {
       display: flex;
       align-items: center; }
@@ -191,7 +182,7 @@ header {
       .react-scroll-page-wrapper .react-scroll-page > div {
         height: initial !important; }
         .react-scroll-page-wrapper .react-scroll-page > div .component {
-          padding: 2rem 1rem;
+          padding: 2rem 0;
           min-height: calc(100vh - 60px); }
           .react-scroll-page-wrapper .react-scroll-page > div .component:first-child {
             padding-top: 0; }

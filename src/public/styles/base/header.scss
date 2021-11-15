@@ -18,18 +18,18 @@ header {
       }
     }
     &__image {
-      &.-desktop {
-        @include mq(xl) {
-          display: none;
-        }
-      }
-      &.-mobile {
-        display: none;
-        width: 45px;
-        @include mq(xl) {
-          display: inline-block;
-        }
-      }
+      // &.-desktop {
+      //   @include mq(xl) {
+      //     display: none;
+      //   }
+      // }
+      // &.-mobile {
+      //   display: none;
+      //   width: 45px;
+      //   @include mq(xl) {
+      //     display: inline-block;
+      //   }
+      // }
     }
 
     .nav-links {

@@ -54,7 +54,7 @@ class Index extends React.Component {
     const { loading } = this.props;
 
     return (
-      <Layout loading={loading} title={"Yoshinaya"} haveFooter={false}>
+      <Layout loading={loading} title={"Yoshinaya"}>
         <ReactPageScroller
           pageOnChange={this.handlePageChange}
           onBeforePageScroll={this.handleBeforePageChange}
@@ -181,10 +181,12 @@ class Index extends React.Component {
             <Special handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-AppCover">
+            {/* <div className="app-cover-footer"> */}
             <div className="appcover__container">
               <AppCover />
               <Footer />
             </div>
+            {/* </div> */}
           </div>
         </ReactPageScroller>
       </Layout>

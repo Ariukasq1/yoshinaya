@@ -205,28 +205,35 @@
   }
 }
 
-.appcover {
-  // position: absolute;
-  // top: 30%;
-  // width: 100%;
-  // left: 0;
-  padding-bottom: 10vh;
-  &__container {
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+// .app-cover-footer {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 5rem;
+//   margin-top: 10rem;
+// }
 
-    .footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-  }
-}
+// .appcover {
+//   // position: absolute;
+//   // top: 30%;
+//   // width: 100%;
+//   // left: 0;
+//   // padding-bottom: 10vh;
+//   &__container {
+//     position: relative;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     // .footer {
+//     //   position: absolute;
+//     //   bottom: 0;
+//     //   left: 0;
+//     //   width: 100%;
+//     // }
+//   }
+// }
 
 .slick-list {
   margin: 0 -0.5rem;

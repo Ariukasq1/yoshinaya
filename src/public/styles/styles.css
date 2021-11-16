@@ -153,7 +153,6 @@ header {
         color: #616E7C; }
       header .tool-bar .nav-links .menu-btn {
         border-radius: 8px;
-        color: #fff;
         text-transform: none;
         font-weight: bold;
         padding: 10px 24px;
@@ -182,9 +181,18 @@ header {
   position: absolute;
   bottom: 0;
   left: 0; }
+.menu-drawer__close {
+  color: #FF7800;
+  display: flex;
+  padding: 10px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+  .menu-drawer__close svg {
+    font-size: 2em !important; }
+  .menu-drawer__close__text {
+    font-size: 1.2em !important; }
 .menu-drawer__menu {
   max-width: 300px;
-  width: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -207,20 +215,17 @@ header {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 0;
-  border-bottom: 0.01em solid rgba(97, 110, 124, 0.4);
-  width: 60%; }
+  border-bottom: 0.01em solid rgba(97, 110, 124, 0.4); }
   .menu-drawer__search__container {
     position: relative;
     width: 100%;
-    width: 100%;
-    margin-bottom: 16px; }
+    width: 100%; }
     .menu-drawer__search__container::after {
       content: "";
       display: block;
       padding-bottom: 50px; }
   .menu-drawer__search.-focus {
-    border-bottom: 2px solid #FF7800;
-    width: 90%; }
+    border-bottom: 2px solid #FF7800; }
 .menu-drawer__close-btn {
   height: 64px;
   width: 64px;
@@ -273,23 +278,6 @@ header {
             justify-content: flex-end; }
             .react-scroll-page-wrapper .react-scroll-page > div .component .arrow-wrapper .custom-arrow {
               bottom: 1rem; } }
-@media only screen and (max-width: 650px) {
-  .menu-drawer__inner {
-    padding: 6px 12px; }
-  .menu-drawer__menu__item {
-    font-size: 16px;
-    line-height: 1.2;
-    padding: 12px 0;
-    white-space: nowrap; }
-    .menu-drawer__menu__item:first-child {
-      margin-top: 12px; }
-  .menu-drawer__close-btn {
-    height: 48px;
-    width: 48px;
-    margin-top: 48px;
-    box-shadow: 0px 16px 40px rgba(255, 120, 0, 0.24), 0px 4px 12px rgba(255, 120, 0, 0.16), 0px 0px 2px rgba(255, 120, 0, 0.08); }
-    .menu-drawer__close-btn svg {
-      font-size: 1.8rem !important; } }
 .special-ramen {
   width: 284px;
   height: 284px;
@@ -538,4 +526,4 @@ header {
   75% {
     transform: rotate(1deg) translate(5px, 0.5vh); } }
 
-/*# sourceMappingURL=style.min.css.map */
+/*# sourceMappingURL=styles.css.map */

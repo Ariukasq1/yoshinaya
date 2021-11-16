@@ -3,6 +3,18 @@ import { Grid, Container } from "@mui/material";
 import ReactPageScroller from "react-page-scroller";
 
 class Special extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleOnMouseOver = () => {
+    this.props.handleBlockScrollUp(true);
+    this.props.handleBlockScrollDown(true);
+  };
+  handleOnMouseOut = () => {
+    this.props.handleBlockScrollUp(false);
+    this.props.handleBlockScrollDown(false);
+  };
   render() {
     const likeEmoji = "/images/likeEmoji.svg";
     const scaryEmoji = "/images/scaryEmoji.svg";
@@ -39,7 +51,11 @@ class Special extends React.Component {
             </div>
           </Grid>
           <Grid item xs={12} md={5}>
-            <div className="scroll-container scroll-chrome">
+            <div
+              className="scroll-container scroll-chrome"
+              onMouseOver={this.handleOnMouseOver}
+              onMouseOut={this.handleOnMouseOut}
+            >
               <div className="scroll-item">
                 <img src={likeEmoji} alt="like emoji" />
                 <div className="title-with-text">

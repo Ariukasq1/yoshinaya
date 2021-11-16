@@ -16,7 +16,12 @@ import Footer from "../components/layouts/footer";
 class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentPage: null, showModal: false, blockScrollUp: false };
+    this.state = {
+      currentPage: null,
+      showModal: false,
+      blockScrollUp: false,
+      blockScrollDown: false,
+    };
   }
 
   // static async getInitialProps() {
@@ -29,9 +34,17 @@ class Index extends React.Component {
   // }
 
   componentDidMount = () => {
-    if (typeof window !== undefined) {
-      this.setState({ blockScrollUp: window.innerWidth < 768 });
+    if (typeof window !== undefined && window.innerWidth < 768) {
+      this.handleBlockScrollUp(true);
     }
+  };
+
+  handleBlockScrollUp = (state) => {
+    this.setState({ blockScrollUp: state });
+  };
+
+  handleBlockScrollDown = (state) => {
+    this.setState({ blockScrollDown: state });
   };
 
   handleModal = () => {
@@ -61,6 +74,7 @@ class Index extends React.Component {
           customPageNumber={this.state.currentPage}
           renderAllPagesOnFirstRender={true}
           blockScrollUp={this.state.blockScrollUp}
+          blockScrollDown={this.state.blockScrollDown}
         >
           <div className="component center home-about" key="home-about">
             <div className="ellipse"></div>
@@ -178,8 +192,11 @@ class Index extends React.Component {
             <Map handleChange={this.handlePageChange} />
           </div>
           <div className="component center" key="home-special">
-            <div className="ellipse"></div>
-            <Special handleChange={this.handlePageChange} />
+            <Special
+              handleChange={this.handlePageChange}
+              handleBlockScrollUp={this.handleBlockScrollUp}
+              handleBlockScrollDown={this.handleBlockScrollDown}
+            />
           </div>
           <div className="component center" key="home-AppCover">
             {/* <div className="app-cover-footer"> */}

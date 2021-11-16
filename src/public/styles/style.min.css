@@ -131,6 +131,11 @@ hr {
   color: #616E7C;
 }
 
+.MuiModal-root iframe {
+  width: 100%;
+  max-height: 90vh;
+}
+
 .overflow-right {
   padding-left: 24px;
 }
@@ -685,9 +690,19 @@ header .tool-bar .nav-links .menu-btn {
   margin: 0;
   width: 100%;
 }
+.history-item img {
+  max-height: 200px;
+  padding-bottom: 1rem;
+}
 .history-item h4 {
   color: #1F2933;
   font-weight: 700;
+}
+.history-item .item-content {
+  padding-top: 0;
+}
+.history-item p {
+  margin-top: 0;
 }
 
 .appcover {

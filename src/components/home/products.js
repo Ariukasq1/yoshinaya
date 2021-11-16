@@ -54,7 +54,11 @@ class Products extends React.Component {
             onClick={() => this.props.handleChange(2)}
           >
             <span>Scroll down</span>
-            <img src="/images/arrow-down.svg" alt="arrow down" />
+            <img
+              src="/images/arrow-down.svg"
+              alt="arrow down"
+              className="up-down-anim"
+            />
           </div>
         </Grid>
         <Grid item xs={12} md={8}>

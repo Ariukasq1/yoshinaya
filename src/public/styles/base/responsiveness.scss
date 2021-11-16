@@ -12,7 +12,7 @@
         height: initial !important;
 
         .component {
-          padding: 2rem 1rem;
+          padding: 2rem 0;
 
           min-height: calc(100vh - 60px);
 
@@ -28,6 +28,36 @@
             }
           }
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
+  // menu
+  .menu-drawer {
+    &__inner {
+      padding: 6px 12px;
+    }
+    &__menu {
+      &__item {
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 12px 0;
+        white-space: nowrap;
+        &:first-child {
+          margin-top: 12px;
+        }
+      }
+    }
+    &__close-btn {
+      height: 48px;
+      width: 48px;
+      margin-top: 48px;
+      box-shadow: 0px 16px 40px rgba(255, 120, 0, 0.24),
+        0px 4px 12px rgba(255, 120, 0, 0.16),
+        0px 0px 2px rgba(255, 120, 0, 0.08);
+      svg {
+        font-size: 1.8rem !important;
       }
     }
   }

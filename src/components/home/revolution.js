@@ -56,9 +56,8 @@ class Revolution extends React.Component {
           >
             <span>Scroll down</span>
             <img
-              src="/images/arrow-down.svg"
+              src="/images/arrow-down.gif"
               alt="arrow down"
-              className="up-down-anim"
             />
           </div>
         </Grid>

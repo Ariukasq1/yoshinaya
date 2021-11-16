@@ -3,7 +3,6 @@ import { Container, Grid } from "@mui/material";
 
 class Map extends React.Component {
   render() {
-    const mapFrame = "/images/map.svg";
 
     return (
       <Container>
@@ -29,14 +28,13 @@ class Map extends React.Component {
             >
               <span>Scroll down</span>
               <img
-                src="/images/arrow-down.svg"
+                src="/images/arrow-down.gif"
                 alt="arrow down"
-                className="up-down-anim"
               />
             </div>
           </Grid>
           <Grid item xs={12} md={7}>
-            <img src={mapFrame} alt="map" />
+            <img src="/images/map.svg" alt="map" />
           </Grid>
         </Grid>
       </Container>

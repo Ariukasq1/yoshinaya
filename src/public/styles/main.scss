@@ -213,17 +213,12 @@
   }
 }
 
-.appcover {
-  padding-bottom: 10vh;
-
-  &__container {
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.app-cover-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 7rem;
 }
 
 .slick-list {

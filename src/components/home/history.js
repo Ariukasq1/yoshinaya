@@ -44,31 +44,23 @@ class History extends React.Component {
         },
       ],
     };
+    const { cat, posts } = this.props;
     return (
       <Grid container spacing={2} alignItems="center" justifyContent="center">
         <Grid item xs={12}>
           <div className="title mb-2">
-            <div className="tag">Үүсэл хөгжил</div>
-            <h1>Түүхэн замнал</h1>
+            {cat.acf && cat.acf.tag && <div className="tag">{cat.acf.tag}</div>}
+            <h1>{cat.name}</h1>
           </div>
-
-          <Slider {...settings}>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-          </Slider>
+          {posts && posts.length > 0 && (
+            <Slider {...settings}>
+              {posts.map((post) => (
+                <div>
+                  <HistoryItem post={post} key={post.id} />
+                </div>
+              ))}
+            </Slider>
+          )}
           <div
             className="icon-scroll-down"
             onClick={() => this.props.handleChange(4)}

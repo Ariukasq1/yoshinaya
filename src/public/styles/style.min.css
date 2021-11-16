@@ -131,6 +131,11 @@ hr {
   color: #616E7C;
 }
 
+.MuiModal-root iframe {
+  width: 100%;
+  max-height: 90vh;
+}
+
 .overflow-right {
   padding-left: 24px;
 }
@@ -327,7 +332,7 @@ header .tool-bar .nav-links .menu-btn {
   filter: invert(35%) sepia(26%) saturate(1170%) hue-rotate(181deg) brightness(100%) contrast(100%);
 }
 .footer-container footer .content .address-container .icons .twitter-link:hover {
-  filter: invert(59%) sepia(79%) saturate(513%) hue-rotate(178deg) brightness(94%) contrast(98%);
+  filter: invert(59%) sepia(79%) saturate(513%) hue-rotate(178deg) brightness(80%) contrast(98%);
 }
 .footer-container footer .content .address-container .icons .instagram-link .bg {
   width: calc(100% - 1px);
@@ -470,7 +475,6 @@ header .tool-bar .nav-links .menu-btn {
   letter-spacing: 0;
   color: #1F2933;
   margin-bottom: 1.06rem;
-  font-size: 1rem;
 }
 
 .scroll-chrome::-webkit-scrollbar {
@@ -699,9 +703,19 @@ header .tool-bar .nav-links .menu-btn {
   margin: 0;
   width: 100%;
 }
+.history-item img {
+  max-height: 200px;
+  padding-bottom: 1rem;
+}
 .history-item h4 {
   color: #1F2933;
   font-weight: 700;
+}
+.history-item .item-content {
+  padding-top: 0;
+}
+.history-item p {
+  margin-top: 0;
 }
 
 .app-cover-footer {

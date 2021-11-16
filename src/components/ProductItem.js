@@ -11,7 +11,7 @@ import {
 class ProductItem extends React.Component {
   render() {
     return (
-      <Card className="product-item">
+      <Card className="product-item zoom-in">
         <div className="loyalty">1000 Yoshi.P</div>
         <CardMedia
           component="img"

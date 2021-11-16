@@ -14,7 +14,11 @@ class Special extends React.Component {
           onClick={() => this.props.handleChange(6)}
         >
           <span>Scroll down</span>
-          <img src="/images/arrow-down.svg" alt="arrow down" />
+          <img
+            src="/images/arrow-down.svg"
+            alt="arrow down"
+            className="up-down-anim"
+          />
         </div>
         <div className="content-special">
           <div className="tag">

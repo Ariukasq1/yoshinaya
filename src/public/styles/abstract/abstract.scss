@@ -7,13 +7,4 @@ $breakpoint: (
   xxl: "1400px",
   xxxl: "1600px",
 );
-
-@mixin mq($canvas) {
-  @each $name, $bp in $breakpoint {
-    @if $canvas == $name {
-      @media only screen and (max-width: $bp) {
-        @content;
-      }
-    }
-  }
-}
+$transition: 0.2s ease-in-out;

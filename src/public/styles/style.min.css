@@ -537,5 +537,25 @@ header {
   25%,
   75% {
     transform: rotate(1deg) translate(5px, 0.5vh); } }
+@keyframes upDown {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-5px); }
+  100% {
+    transform: translateY(0px); } }
+.up-down-anim {
+  animation: upDown 1.2s infinite; }
+
+.zoom-in {
+  overflow: hidden;
+  display: inline-block; }
+  .zoom-in img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.2s ease-in-out; }
+  .zoom-in:hover img {
+    transform: scale(1.1); }
 
 /*# sourceMappingURL=style.min.css.map */

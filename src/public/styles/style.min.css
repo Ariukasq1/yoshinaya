@@ -521,98 +521,38 @@ header .tool-bar .nav-links .menu-btn {
 .grid-map {
   position: relative;
 }
-.grid-map .location1 {
+.grid-map img:not(:first-child) {
   position: absolute;
-  transition: all 0.5s;
-  left: 33%;
-  top: 0;
+  transition: ease-in-out 0.8s;
+  cursor: pointer;
 }
-.grid-map .location1:hover {
-  transform: scale(1.2);
-}
-.grid-map .locationCan {
-  position: absolute;
-  transition: all 0.5s;
-  left: 18%;
-  top: 15%;
-}
-.grid-map .locationCan:hover {
-  transform: scale(1.2);
-}
-.grid-map .locationEN {
-  position: absolute;
-  transition: all 0.5s;
-  left: 30%;
-  top: 50%;
-}
-.grid-map .locationEN:hover {
-  transform: scale(1.2);
-}
-.grid-map .location2 {
-  position: absolute;
-  transition: all 0.5s;
-  left: 45%;
-  top: 28%;
-}
-.grid-map .location2:hover {
-  transform: scale(1.2);
-}
-.grid-map .location5 {
-  position: absolute;
-  transition: all 0.5s;
-  left: 53%;
-  top: 50%;
-}
-.grid-map .location5:hover {
-  transform: scale(1.2);
-}
-.grid-map .location3 {
-  position: absolute;
-  transition: all 0.5s;
-  right: 34%;
-  top: 23%;
-}
-.grid-map .location3:hover {
-  transform: scale(1.2);
-}
-.grid-map .locationCN {
-  position: absolute;
-  transition: all 0.5s;
-  right: 28%;
-  top: 26%;
-}
-.grid-map .locationCN:hover {
-  transform: scale(1.2);
-}
-.grid-map .location4 {
-  position: absolute;
-  transition: all 0.5s;
-  right: 21%;
-  top: 34%;
-  z-index: 1;
-}
-.grid-map .location4:hover {
-  transform: scale(1.2);
-}
-.grid-map .locationJP {
-  position: absolute;
-  transition: all 0.5s;
-  right: 21%;
-  top: 12%;
-}
-.grid-map .locationJP:hover {
-  transform: scale(1.2);
-}
-.grid-map .locationJP2 {
-  position: absolute;
-  transition: all 0.5s;
-  right: 10%;
-  top: 43%;
-}
-.grid-map .locationJP2:hover {
-  transform: scale(1.2);
+.grid-map img:not(:first-child):hover {
+  -webkit-animation: MoveUpDown 1s ease-in-out infinite;
+  animation: MoveUpDown 1s ease-in-out infinite;
 }
 
+@-webkit-keyframes MoveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .ellipse {
   position: absolute;
   left: 65%;

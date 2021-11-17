@@ -11,6 +11,7 @@ import Products from "../components/home/products";
 import History from "../components/home/history";
 import Revolution from "../components/home/revolution";
 import Footer from "../components/layouts/footer";
+import Locations from "../components/home/locations";
 // const wp = new WPAPI({ endpoint: Config.apiUrl });
 
 class Index extends React.Component {
@@ -168,7 +169,6 @@ class Index extends React.Component {
               <Revolution handleChange={this.handlePageChange} />
             </Container>
           </div>
-
           <div className="component center history" key="home-history">
             <div className="ellipse"></div>
             <div className="overflow-right component center">
@@ -197,6 +197,9 @@ class Index extends React.Component {
               handleBlockScrollUp={this.handleBlockScrollUp}
               handleBlockScrollDown={this.handleBlockScrollDown}
             />
+          </div>
+          <div className="component center" key="home-Locations">
+            <Locations />
           </div>
           <div className="component center" key="home-AppCover">
             {/* <div className="app-cover-footer"> */}

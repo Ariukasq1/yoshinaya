@@ -166,6 +166,7 @@ hr {
 header {
   border-bottom: 1px solid;
   border-color: #00000014;
+  background-color: transparent !important;
 }
 header .tool-bar {
   display: flex;
@@ -192,6 +193,7 @@ header .tool-bar__menu svg {
 header .tool-bar .nav-links {
   display: flex;
   align-items: center;
+  display: none;
 }
 header .tool-bar .nav-links span {
   color: #616E7C;
@@ -296,7 +298,7 @@ header .tool-bar .nav-links .menu-btn {
 }
 
 .footer-container footer {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .footer-container footer .content {
   padding: 0 4rem;
@@ -308,7 +310,7 @@ header .tool-bar .nav-links .menu-btn {
 }
 .footer-container footer .content .address-container .address {
   max-width: 40%;
-  padding: 2rem 0;
+  padding: 0;
 }
 .footer-container footer .content .address-container .icons {
   display: flex;
@@ -648,6 +650,9 @@ header .tool-bar .nav-links .menu-btn {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+.icon-scroll-down .rotate {
+  transform: rotate(180deg);
 }
 .icon-scroll-down img {
   margin: auto;

@@ -18,6 +18,7 @@ const wp = new WPAPI({ endpoint: Config.apiUrl });
 const Index = ({
   loading,
   about,
+  contact,
   history,
   historyCat,
   revolution,
@@ -115,7 +116,7 @@ const Index = ({
         <div className="component center" key="home-AppCover">
           <div className="app-cover-footer h-100">
             <AppCover />
-            <Footer handleChange={handlePageChange} />
+            <Footer page={contact} handleChange={handlePageChange} />
           </div>
         </div>
       </ReactPageScroller>
@@ -135,6 +136,14 @@ Index.getInitialProps = async (ctx) => {
   const revolution = await wp
     .pages()
     .slug("revolution")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+
+  const contact = await wp
+    .pages()
+    .slug("contact")
     .embed()
     .then((data) => {
       return data[0];
@@ -193,6 +202,7 @@ Index.getInitialProps = async (ctx) => {
 
   return {
     about,
+    contact,
     history,
     historyCat,
     revolution,

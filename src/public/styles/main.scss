@@ -139,6 +139,10 @@
   letter-spacing: 0.5px;
   @include transition(all 0.3s ease-in-out);
 
+  .rotate {
+    transform: rotate(180deg);
+  }
+
   img {
     margin: auto;
     width: 40px;

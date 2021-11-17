@@ -11,8 +11,8 @@ const AppCover = () => {
         justifyContent="center"
         className="background-style"
       >
-        <Grid item xs={12} md={8} className="app-content">
-          <h2>
+        <Grid item xs={12} md={7} className="app-content">
+          <h2 className="mr-3">
             Та манай аппликейшиныг татсанаар олон онцгой боломжууд хүлээж байна.
           </h2>
           <div className="store-images">
@@ -20,7 +20,7 @@ const AppCover = () => {
             <img src="/images/playStore.svg" alt="play store" />
           </div>
         </Grid>
-        <Grid item sx={12} md={4} className="phone-image">
+        <Grid item sx={12} md={5} className="phone-image">
           <img
             src="/images/phones.svg"
             alt="application phone"

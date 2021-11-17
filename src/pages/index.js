@@ -26,7 +26,8 @@ const Index = ({
   features,
   productCat,
   products,
-  internationallyCat,
+  mapCat,
+  locations,
 }) => {
   const [currentPage, setCurrentPage] = useState(null);
   const [blockScrollUp, setBlockScrollUp] = useState(false);
@@ -104,7 +105,7 @@ const Index = ({
         )}
         <div className="component center" key="home-map">
           <div className="ellipse"></div>
-          <Map cat={internationallyCat} handleChange={handlePageChange} />
+          <Map handleChange={handlePageChange} posts={locations} cat={mapCat} />
         </div>
         <div className="component center" key="home-special">
           <div className="ellipse"></div>
@@ -198,15 +199,22 @@ Index.getInitialProps = async (ctx) => {
     .perPage(100)
     .then((data) => {
       return data;
-    })
-    .catch((err) => console.log(err));
-
-  const internationallyCat = await wp
+    });
+  const mapCat = await wp
     .categories()
-    .slug("internationally")
+    .slug("map")
     .embed()
     .then((data) => {
       return data[0];
+    })
+    .catch((err) => console.log(err));
+  const locations = await wp
+    .posts()
+    .categories(mapCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
     });
   return {
     about,
@@ -218,7 +226,8 @@ Index.getInitialProps = async (ctx) => {
     features,
     productCat,
     products,
-    internationallyCat,
+    mapCat,
+    locations,
   };
 };
 

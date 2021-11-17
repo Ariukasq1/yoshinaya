@@ -364,10 +364,6 @@ header .tool-bar .nav-links .menu-btn {
 .footer-container footer .content .address-container .icons .instagram-link:hover .bg::before {
   opacity: 1;
 }
-.footer-container .icon-scroll-up img {
-  overflow: hidden;
-  transform: rotate(-180deg);
-}
 
 @media only screen and (max-width: 767px) {
   .react-scroll-page-wrapper {
@@ -522,6 +518,101 @@ header .tool-bar .nav-links .menu-btn {
   right: -10%;
 }
 
+.grid-map {
+  position: relative;
+}
+.grid-map .location1 {
+  position: absolute;
+  transition: all 0.5s;
+  left: 33%;
+  top: 0;
+}
+.grid-map .location1:hover {
+  transform: scale(1.2);
+}
+.grid-map .locationCan {
+  position: absolute;
+  transition: all 0.5s;
+  left: 18%;
+  top: 15%;
+}
+.grid-map .locationCan:hover {
+  transform: scale(1.2);
+}
+.grid-map .locationEN {
+  position: absolute;
+  transition: all 0.5s;
+  left: 30%;
+  top: 50%;
+}
+.grid-map .locationEN:hover {
+  transform: scale(1.2);
+}
+.grid-map .location2 {
+  position: absolute;
+  transition: all 0.5s;
+  left: 45%;
+  top: 28%;
+}
+.grid-map .location2:hover {
+  transform: scale(1.2);
+}
+.grid-map .location5 {
+  position: absolute;
+  transition: all 0.5s;
+  left: 53%;
+  top: 50%;
+}
+.grid-map .location5:hover {
+  transform: scale(1.2);
+}
+.grid-map .location3 {
+  position: absolute;
+  transition: all 0.5s;
+  right: 34%;
+  top: 23%;
+}
+.grid-map .location3:hover {
+  transform: scale(1.2);
+}
+.grid-map .locationCN {
+  position: absolute;
+  transition: all 0.5s;
+  right: 28%;
+  top: 26%;
+}
+.grid-map .locationCN:hover {
+  transform: scale(1.2);
+}
+.grid-map .location4 {
+  position: absolute;
+  transition: all 0.5s;
+  right: 21%;
+  top: 34%;
+  z-index: 1;
+}
+.grid-map .location4:hover {
+  transform: scale(1.2);
+}
+.grid-map .locationJP {
+  position: absolute;
+  transition: all 0.5s;
+  right: 21%;
+  top: 12%;
+}
+.grid-map .locationJP:hover {
+  transform: scale(1.2);
+}
+.grid-map .locationJP2 {
+  position: absolute;
+  transition: all 0.5s;
+  right: 10%;
+  top: 43%;
+}
+.grid-map .locationJP2:hover {
+  transform: scale(1.2);
+}
+
 .ellipse {
   position: absolute;
   left: 65%;
@@ -653,6 +744,7 @@ header .tool-bar .nav-links .menu-btn {
 }
 .icon-scroll-down .rotate {
   transform: rotate(180deg);
+  overflow: hidden;
 }
 .icon-scroll-down img {
   margin: auto;

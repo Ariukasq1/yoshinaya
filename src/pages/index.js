@@ -199,7 +199,11 @@ class Index extends React.Component {
             />
           </div>
           <div className="component center" key="home-Locations">
-            <Locations />
+            <div className="ellipse"></div>
+            <Locations
+              handleBlockScrollUp={this.handleBlockScrollUp}
+              handleBlockScrollDown={this.handleBlockScrollDown}
+            />
           </div>
           <div className="component center" key="home-AppCover">
             {/* <div className="app-cover-footer"> */}

@@ -12,8 +12,10 @@ class Special extends React.Component {
     this.props.handleBlockScrollDown(true);
   };
   handleOnMouseOut = () => {
-    this.props.handleBlockScrollUp(false);
-    this.props.handleBlockScrollDown(false);
+    if (typeof window !== undefined && window.innerWidth > 768) {
+      this.props.handleBlockScrollUp(false);
+      this.props.handleBlockScrollDown(false);
+    }
   };
   render() {
     const likeEmoji = "/images/likeEmoji.svg";

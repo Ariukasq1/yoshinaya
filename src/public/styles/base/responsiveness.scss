@@ -1,4 +1,43 @@
+@media only screen and (max-width: 1200px) {
+  .locations {
+    &__item {
+      img {
+        width: 35% !important;
+      }
+      &__content {
+        width: 65% !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .locations {
+    &__item {
+      img {
+        width: 25% !important;
+      }
+      &__content {
+        width: 75% !important;
+      }
+    }
+    &__scroll {
+      max-height: 30vh;
+    }
+    &__map {
+      max-height: 40vh;
+    }
+  }
+  .scroll-container {
+    height: 30vh;
+  }
+}
+
 @media only screen and (max-width: 767px) {
+  .MuiGrid-item {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+  }
   .react-scroll-page-wrapper {
     height: initial !important;
 
@@ -59,6 +98,38 @@
       svg {
         font-size: 1.8rem !important;
       }
+    }
+  }
+  .locations {
+    &__item {
+      img {
+        width: 35% !important;
+      }
+      &__content {
+        width: 65% !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .locations {
+    &__item {
+      flex-direction: column;
+      img {
+        width: 100% !important;
+        height: 200px;
+      }
+      &__content {
+        width: 100% !important;
+        h1 {
+          margin-top: 16px;
+        }
+      }
+    }
+    &__scroll {
+      overflow-x: hidden;
+      overflow-y: visible;
+      max-height: auto;
     }
   }
 }

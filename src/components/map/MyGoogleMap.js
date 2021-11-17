@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import GoogleMapReact from "google-map-react";
 const MyGoogleMap = () => {
   const center = {
@@ -19,19 +19,21 @@ const MyGoogleMap = () => {
       fullscreenControl={false}
       debounced={true}
       yesIWantToUseGoogleMapApiInternals
-    ></GoogleMapReact>
+    >
+      {}
+    </GoogleMapReact>
   );
 };
 
-MyGoogleMap.PropTypes = {
-  center: PropTypes.array, // @controllable
-  zoom: PropTypes.number, // @controllable
-  hoverKey: PropTypes.string, // @controllable
-  clickKey: PropTypes.string, // @controllable
-  onCenterChange: PropTypes.func, // @controllable generated fn
-  onZoomChange: PropTypes.func, // @controllable generated fn
-  onHoverKeyChange: PropTypes.func, // @controllable generated fn
-  greatPlaces: PropTypes.array,
+MyGoogleMap.propTypes = {
+  center: propTypes.array, // @controllable
+  zoom: propTypes.number, // @controllable
+  hoverKey: propTypes.string, // @controllable
+  clickKey: propTypes.string, // @controllable
+  onCenterChange: propTypes.func, // @controllable generated fn
+  onZoomChange: propTypes.func, // @controllable generated fn
+  onHoverKeyChange: propTypes.func, // @controllable generated fn
+  greatPlaces: propTypes.array,
 };
 
 export default MyGoogleMap;

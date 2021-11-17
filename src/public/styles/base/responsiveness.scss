@@ -1,23 +1,36 @@
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
+  .title h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .title h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
   .react-scroll-page-wrapper {
     height: initial !important;
 
     .react-scroll-page {
       transform: none !important;
       transition: none !important;
+
       .icon-scroll-down {
         display: none;
       }
-      & > div {
+
+      &>div {
         height: initial !important;
 
         .component {
           padding: 2rem 0;
-
-          min-height: calc(100vh - 60px);
+          min-height: 80vh;
 
           &:first-child {
-            padding-top: 0;
+            padding-top: 5rem;
           }
 
           .arrow-wrapper {
@@ -29,26 +42,89 @@
           }
         }
       }
+
+      .overflow-right>.MuiGrid-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .scroll-container .scroll-item .title-with-text {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+
+  .special-ramen {
+    max-width: 70vw;
+  }
+
+  .background-style {
+    height: auto;
+
+    .app-content {
+      padding: 1rem;
+
+      h2 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+    }
+
+    .app-cover-img {
+      position: relative;
+      margin-top: -10%;
     }
   }
 }
+
+@media only screen and (max-width: 767px) {
+
+  .title h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .history-item {
+    display: flex;
+    flex-wrap: initial;
+  }
+
+  .footer-container footer .content {
+    padding: 0;
+
+    .address-container {
+      display: grid;
+
+      .address {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 650px) {
+
   // menu
   .menu-drawer {
     &__inner {
       padding: 6px 12px;
     }
+
     &__menu {
       &__item {
         font-size: 16px;
         line-height: 1.2;
         padding: 12px 0;
         white-space: nowrap;
+
         &:first-child {
           margin-top: 12px;
         }
       }
     }
+
     &__close-btn {
       height: 48px;
       width: 48px;
@@ -56,6 +132,7 @@
       box-shadow: 0px 16px 40px rgba(255, 120, 0, 0.24),
         0px 4px 12px rgba(255, 120, 0, 0.16),
         0px 0px 2px rgba(255, 120, 0, 0.08);
+
       svg {
         font-size: 1.8rem !important;
       }

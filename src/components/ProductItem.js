@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-} from "@mui/material";
+import { Card, CardActions, CardContent, CardMedia } from "@mui/material";
 import { getData } from "../utils";
 
 class ProductItem extends React.Component {

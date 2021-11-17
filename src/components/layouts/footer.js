@@ -50,9 +50,9 @@ class Footer extends React.Component {
                     </div>
                   </a>
                 </div>
-                <Typography color="black">
+                <p className="no-margin copyright">
                   Зохиогчийн эрхээр хамгаалагдсан 2021 он
-                </Typography>
+                </p>
               </div>
             </div>
           </div>

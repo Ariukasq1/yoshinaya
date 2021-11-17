@@ -1,19 +1,20 @@
 import React from "react";
 import { Grid, Container } from "@mui/material";
-import ReactPageScroller from "react-page-scroller";
+import { getData } from "../../utils";
 
 class Special extends React.Component {
 	render() {
+		const { cat, posts } = this.props;
 		return (
 			<Container className="relative h-100 flex align-center">
 				<Grid container spacing={6} alignItems="center" justifyContent="center">
 					<Grid item xs={12}>
 						<div className="content-special">
 							<div className="tag">
-								<p className="no-margin">Үүсэл хөгжил</p>
+								<p className="no-margin">{cat.acf.tag}</p>
 							</div>
 							<div className="title">
-								<h1 className="title-margin no-margin">YOSHINOYA-н онцлог</h1>
+								<h1 className="title-margin no-margin">{cat.name}</h1>
 							</div>
 						</div>
 					</Grid>
@@ -40,53 +41,29 @@ class Special extends React.Component {
 							onClick={() => this.props.handleChange(6)}
 						>
 							<span>Scroll down</span>
-							<img
-								src="/images/arrow-down.gif"
-								alt="arrow down"
-							/>
+							<img src="/images/arrow-down.gif" alt="arrow down" />
 						</div>
 					</Grid>
 					<Grid item xs={12} md={5}>
 						<div className="scroll-container scroll-chrome">
-							<div className="scroll-item">
-								<img src="/images/likeEmoji.svg" alt="like emoji" />
-								<div className="title-with-text">
-									<h4 className="no-margin">Үйлчилгээ</h4>
-									<p className="text no-margin">
-										1 – 2 bowl-г 60 секундэд, 3-с дээш bowl-г 3 минутанд багтаж
-										үйлчлэх ёстой.
-									</p>
-								</div>
-							</div>
-							<div className="scroll-item">
-								<img src="/images/scaryEmoji.svg" alt="scary emoji" />
-								<div className="title-with-text">
-									<h4 className="no-margin">Өвөрмөц амт</h4>
-									<p className="text no-margin">
-										120 жилийн турш одоог хүртэл өөрчлөгдөөгүй, цорын ганц амт.
-									</p>
-								</div>
-							</div>
-							<div className="scroll-item">
-								<img src="/images/saladEmoji.svg" alt="salad emoji" />
-								<div className="title-with-text">
-									<h4 className="no-margin">Эрүүл хоол</h4>
-									<p className="text no-margin">
-										Бусад түргэн хоолны сүлжээ рестораны хоолтой харьцуулахад
-										хуурч, шараагүйгээрээ
-									</p>
-								</div>
-							</div>
-							<div className="scroll-item">
-								<img src="/images/saladEmoji.svg" alt="salad emoji" />
-								<div className="title-with-text">
-									<h4 className="no-margin">Эрүүл хоол</h4>
-									<p className="text no-margin">
-										Бусад түргэн хоолны сүлжээ рестораны хоолтой харьцуулахад
-										хуурч, шараагүйгээрээ
-									</p>
-								</div>
-							</div>
+							{posts && posts.length > 0 && (
+								<>
+									{posts.map((post) => (
+										<div className="scroll-item">
+											<img src={getData(post._embedded, "image")} alt="like emoji" />
+											<div className="title-with-text">
+												<h4 className="no-margin">{post.title.rendered}</h4>
+												<p
+													dangerouslySetInnerHTML={{
+														__html: post.content.rendered,
+													}}
+													className="text no-margin"
+												/>
+											</div>
+										</div>
+									))}
+								</>
+							)}
 						</div>
 					</Grid>
 				</Grid>

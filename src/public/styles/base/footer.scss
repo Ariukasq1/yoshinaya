@@ -101,10 +101,8 @@
 			}
 		}
 	}
-	.icon-scroll-up {
-		img {
-			overflow: hidden;
-			transform: rotate(-180deg);
-		}
+	.rotate {
+		overflow: hidden;
+		transform: rotate(-180deg);
 	}
 }

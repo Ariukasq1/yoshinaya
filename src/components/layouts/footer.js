@@ -54,11 +54,13 @@ class Footer extends React.Component {
 					</div>
 				</footer>
 				<div
-					className="icon-scroll-down icon-scroll-up"
+					className="icon-scroll-down"
 					onClick={() => this.props.handleChange(0)}
 				>
 					<span>Эхлэх</span>
-					<img src="/images/arrow-up.gif" alt="arrow up" className="rotate" />
+					<div className="rotate">
+						<img src="/images/arrow-up.gif" alt="arrow up" />
+					</div>
 				</div>
 			</Container>
 		);

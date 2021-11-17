@@ -15,7 +15,16 @@ import Footer from "../components/layouts/footer";
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
-const Index = ({ loading, about, history, historyCat, revolution }) => {
+const Index = ({
+	loading,
+	about,
+	history,
+	historyCat,
+	revolution,
+	mapCat,
+	featureCat,
+	feature,
+}) => {
 	const [currentPage, setCurrentPage] = useState(null);
 	const [blockScrollUp, setBlockScrollUp] = useState(false);
 
@@ -32,6 +41,7 @@ const Index = ({ loading, about, history, historyCat, revolution }) => {
 	const handleBeforePageChange = (number) => {
 		console.log(number);
 	};
+
 	return (
 		<Layout loading={loading} title={"Yoshinaya"}>
 			<ReactPageScroller
@@ -40,6 +50,7 @@ const Index = ({ loading, about, history, historyCat, revolution }) => {
 				customPageNumber={currentPage}
 				renderAllPagesOnFirstRender={true}
 				blockScrollUp={blockScrollUp}
+				animationTimer={1300}
 			>
 				<div className="component center home-about" key="home-about">
 					<div className="ellipse"></div>
@@ -88,12 +99,19 @@ const Index = ({ loading, about, history, historyCat, revolution }) => {
 				)}
 				<div className="component center" key="home-map">
 					<div className="ellipse"></div>
-					<Map handleChange={handlePageChange} />
+					<Map handleChange={handlePageChange} cat={mapCat} />
 				</div>
-				<div className="component center" key="home-special">
-					<div className="ellipse"></div>
-					<Special handleChange={handlePageChange} />
-				</div>
+				{feature && (
+					<div className="component center" key="home-special">
+						<div className="ellipse"></div>
+						<Special
+							handleChange={handlePageChange}
+							cat={featureCat}
+							posts={feature}
+						/>
+					</div>
+				)}
+
 				<div className="component center" key="home-AppCover">
 					<div className="app-cover-footer h-100">
 						<AppCover />
@@ -136,6 +154,28 @@ Index.getInitialProps = async (ctx) => {
 		.perPage(100)
 		.then((data) => {
 			return data;
+		});
+	const mapCat = await wp
+		.categories()
+		.slug("map")
+		.embed()
+		.then((data) => {
+			return data[0];
+		});
+	const featureCat = await wp
+		.categories()
+		.slug("feature")
+		.embed()
+		.then((data) => {
+			return data[0];
+		});
+	const feature = await wp
+		.posts()
+		.categories(featureCat.id)
+		.embed()
+		.perPage(100)
+		.then((data) => {
+			return data;
 		})
 		.catch((err) => console.log(err));
 
@@ -144,6 +184,9 @@ Index.getInitialProps = async (ctx) => {
 		history,
 		historyCat,
 		revolution,
+		mapCat,
+		featureCat,
+		feature,
 	};
 };
 

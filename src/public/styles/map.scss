@@ -121,3 +121,101 @@
 		right: -10%;
 	}
 }
+
+// map.js
+.grid-map {
+	position: relative;
+	.location1 {
+		position: absolute;
+		transition: all 0.5s;
+		left: 33%;
+		top: 0;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationCan {
+		position: absolute;
+		transition: all 0.5s;
+		left: 18%;
+		top: 15%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationEN {
+		position: absolute;
+		transition: all 0.5s;
+		left: 30%;
+		top: 50%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location2 {
+		position: absolute;
+		transition: all 0.5s;
+		left: 45%;
+		top: 28%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location5 {
+		position: absolute;
+		transition: all 0.5s;
+		left: 53%;
+		top: 50%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location3 {
+		position: absolute;
+		transition: all 0.5s;
+		right: 34%;
+		top: 23%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationCN {
+		position: absolute;
+		transition: all 0.5s;
+		right: 28%;
+		top: 26%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location4 {
+		position: absolute;
+		transition: all 0.5s;
+		right: 21%;
+		top: 34%;
+		z-index: 1;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationJP {
+		position: absolute;
+		transition: all 0.5s;
+		right: 21%;
+		top: 12%;
+		
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationJP2 {
+		position: absolute;
+		transition: all 0.5s;
+		right: 10%;
+		top: 43%;
+		
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}

@@ -311,6 +311,7 @@ header .tool-bar .nav-links .menu-btn {
 .footer-container footer .content .address-container .address {
   max-width: 40%;
   padding: 0;
+  color: #1F2933;
 }
 .footer-container footer .content .address-container .icons {
   display: flex;
@@ -364,58 +365,10 @@ header .tool-bar .nav-links .menu-btn {
 .footer-container footer .content .address-container .icons .instagram-link:hover .bg::before {
   opacity: 1;
 }
+.footer-container footer .content .address-container .copyright {
+  color: #1F2933;
+}
 
-@media only screen and (max-width: 767px) {
-  .react-scroll-page-wrapper {
-    height: initial !important;
-  }
-  .react-scroll-page-wrapper .react-scroll-page {
-    transform: none !important;
-    transition: none !important;
-  }
-  .react-scroll-page-wrapper .react-scroll-page .icon-scroll-down {
-    display: none;
-  }
-  .react-scroll-page-wrapper .react-scroll-page > div {
-    height: initial !important;
-  }
-  .react-scroll-page-wrapper .react-scroll-page > div .component {
-    padding: 2rem 0;
-    min-height: calc(100vh - 60px);
-  }
-  .react-scroll-page-wrapper .react-scroll-page > div .component:first-child {
-    padding-top: 0;
-  }
-  .react-scroll-page-wrapper .react-scroll-page > div .component .arrow-wrapper {
-    justify-content: flex-end;
-  }
-  .react-scroll-page-wrapper .react-scroll-page > div .component .arrow-wrapper .custom-arrow {
-    bottom: 1rem;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .menu-drawer__inner {
-    padding: 6px 12px;
-  }
-  .menu-drawer__menu__item {
-    font-size: 16px;
-    line-height: 1.2;
-    padding: 12px 0;
-    white-space: nowrap;
-  }
-  .menu-drawer__menu__item:first-child {
-    margin-top: 12px;
-  }
-  .menu-drawer__close-btn {
-    height: 48px;
-    width: 48px;
-    margin-top: 48px;
-    box-shadow: 0px 16px 40px rgba(255, 120, 0, 0.24), 0px 4px 12px rgba(255, 120, 0, 0.16), 0px 0px 2px rgba(255, 120, 0, 0.08);
-  }
-  .menu-drawer__close-btn svg {
-    font-size: 1.8rem !important;
-  }
-}
 .special-ramen {
   max-height: 100%;
   max-width: 25vw;
@@ -907,6 +860,118 @@ header .tool-bar .nav-links .menu-btn {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .title h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .title h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .react-scroll-page-wrapper {
+    height: initial !important;
+  }
+  .react-scroll-page-wrapper .react-scroll-page {
+    transform: none !important;
+    transition: none !important;
+  }
+  .react-scroll-page-wrapper .react-scroll-page .icon-scroll-down {
+    display: none;
+  }
+  .react-scroll-page-wrapper .react-scroll-page > div {
+    height: initial !important;
+  }
+  .react-scroll-page-wrapper .react-scroll-page > div .component {
+    padding: 2rem 0;
+    min-height: 80vh;
+  }
+  .react-scroll-page-wrapper .react-scroll-page > div .component:first-child {
+    padding-top: 5rem;
+  }
+  .react-scroll-page-wrapper .react-scroll-page > div .component .arrow-wrapper {
+    justify-content: flex-end;
+  }
+  .react-scroll-page-wrapper .react-scroll-page > div .component .arrow-wrapper .custom-arrow {
+    bottom: 1rem;
+  }
+  .react-scroll-page-wrapper .react-scroll-page .overflow-right > .MuiGrid-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .scroll-container .scroll-item .title-with-text {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+
+  .special-ramen {
+    max-width: 70vw;
+  }
+
+  .background-style {
+    height: auto;
+  }
+  .background-style .app-content {
+    padding: 1rem;
+  }
+  .background-style .app-content h2 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .background-style .app-cover-img {
+    position: relative;
+    margin-top: -10%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .title h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .history-item {
+    display: flex;
+    flex-wrap: initial;
+  }
+
+  .footer-container footer .content {
+    padding: 0;
+  }
+  .footer-container footer .content .address-container {
+    display: grid;
+  }
+  .footer-container footer .content .address-container .address {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .menu-drawer__inner {
+    padding: 6px 12px;
+  }
+  .menu-drawer__menu__item {
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 12px 0;
+    white-space: nowrap;
+  }
+  .menu-drawer__menu__item:first-child {
+    margin-top: 12px;
+  }
+  .menu-drawer__close-btn {
+    height: 48px;
+    width: 48px;
+    margin-top: 48px;
+    box-shadow: 0px 16px 40px rgba(255, 120, 0, 0.24), 0px 4px 12px rgba(255, 120, 0, 0.16), 0px 0px 2px rgba(255, 120, 0, 0.08);
+  }
+  .menu-drawer__close-btn svg {
+    font-size: 1.8rem !important;
   }
 }
 

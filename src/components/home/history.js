@@ -25,20 +25,9 @@ class History extends React.Component {
           },
         },
         {
-          breakpoint: 899,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-        {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
+            centerMode: false,
             slidesToShow: 1,
           },
         },

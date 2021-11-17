@@ -15,7 +15,7 @@ class HistoryItem extends React.Component {
             />
           </ButtonBase>
         </Grid>
-        <Grid item xs={12} sm container>
+        <Grid item sm container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs>
               <h4 className="m-0 no-margin">{post.title.rendered}</h4>

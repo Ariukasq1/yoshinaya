@@ -5,29 +5,29 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Typography,
 } from "@mui/material";
+import { getData } from "../utils";
 
 class ProductItem extends React.Component {
   render() {
+    const { post } = this.props;
     return (
-      <Card className="product-item zoom-in">
-        <div className="loyalty">1000 Yoshi.P</div>
+      <Card className="product-item zoom-in" key={post.id}>
+        {/* <div className="loyalty">1000 Yoshi.P</div> */}
         <CardMedia
           component="img"
           height="140"
-          image="/images/Gyudon.png"
-          alt="green iguana"
+          image={getData(post._embedded, "image")}
+          alt={post.title.rendered}
         />
         <CardContent>
-          <h4>Gyudon</h4>
-          <div className="">
-            Yoshinoya-н хамгийн алдартай хоол нь Gyudon ( 牛丼) (beef bowl) буюу
-            Үхрийн махны боул юм.
-          </div>
+          <h4>{post.title.rendered}</h4>
+          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
         </CardContent>
         <CardActions>
-          <span className="price">Үнэ: 8900₮</span>
+          <span className="price">
+            Үнэ: {(post.acf && post.acf.price) || "0"}₮
+          </span>
         </CardActions>
       </Card>
     );

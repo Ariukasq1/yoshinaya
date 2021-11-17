@@ -55,9 +55,7 @@ class History extends React.Component {
           {posts && posts.length > 0 && (
             <Slider {...settings}>
               {posts.map((post) => (
-                <div>
-                  <HistoryItem post={post} key={post.id} />
-                </div>
+                <HistoryItem post={post} key={post.id} />
               ))}
             </Slider>
           )}
@@ -66,10 +64,7 @@ class History extends React.Component {
             onClick={() => this.props.handleChange(4)}
           >
             <span>Scroll down</span>
-            <img
-              src="/images/arrow-down.gif"
-              alt="arrow down"
-            />
+            <img src="/images/arrow-down.gif" alt="arrow down" />
           </div>
         </Grid>
       </Grid>

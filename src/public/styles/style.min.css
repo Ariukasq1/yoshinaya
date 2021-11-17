@@ -460,8 +460,11 @@ header .tool-bar .nav-links .menu-btn {
   margin-bottom: 2rem;
 }
 .scroll-container .scroll-item img {
-  width: 11vh;
-  height: 11vh;
+  width: 4vh;
+  height: 4vh;
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #CBD2D9;
 }
 .scroll-container .scroll-item .title-with-text {
   margin-left: 2.3rem;

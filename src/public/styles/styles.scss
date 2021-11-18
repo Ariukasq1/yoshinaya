@@ -1,5 +1,5 @@
 //abstract
-@import "./abstract/abstract.scss";
+@import "./base/abstract.scss";
 
 // base
 @import "./base/mixins.scss";
@@ -7,8 +7,9 @@
 @import "./base/general.scss";
 @import "./base/header.scss";
 @import "./base/footer.scss";
-@import "./base/responsiveness.scss";
 
 @import "./map.scss";
 @import "./locations.scss";
 @import "./main.scss";
+
+@import "./base/responsiveness.scss";

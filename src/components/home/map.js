@@ -3,40 +3,46 @@ import { Container, Grid } from "@mui/material";
 
 class Map extends React.Component {
   render() {
-    const mapFrame = "/images/map.svg";
-
+    const { cat, posts } = this.props;
+    console.log(posts, "posts");
     return (
       <Container>
         <Grid container spacing={2} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={5}>
             <div className="content">
               <div className="tag">
-                <p className="no-margin">Үүсэл хөгжил</p>
+                <p className="no-margin">{cat && cat.acf && cat.acf.tag}</p>
               </div>
               <div className="title">
-                <h1 className="title-margin">Yoshinoya олон улсад</h1>
+                <h1 className="title-margin">{cat && cat.name}</h1>
               </div>
-              <p className="text">
-                YOSHINOYA олон улсын түргэн хоолны сүлжээ ресторан 12 гаруй
-                оронд 2,100 гаруй салбартайгаар үйл ажиллагаа явуулж байгаа
-                бөгөөд Монгол улс Yoshinoya-н франчайз эрхийг авсан 13 дахь орон
-                болсон
-              </p>
+              <p className="text">{cat && cat.description}</p>
             </div>
             <div
               className="icon-scroll-down"
               onClick={() => this.props.handleChange(5)}
             >
               <span>Scroll down</span>
-              <img
-                src="/images/arrow-down.svg"
-                alt="arrow down"
-                className="up-down-anim"
-              />
+              <img src="/images/arrow-down.gif" alt="arrow down" />
             </div>
           </Grid>
-          <Grid item xs={12} md={7}>
-            <img src={mapFrame} alt="map" />
+          <Grid item xs={12} md={7} className="grid-map">
+            <img src="/images/map.svg" alt="map" />
+            <img
+              src="/images/location1.svg"
+              alt=""
+              className="location1"
+              style={{}}
+            />
+            <img src="/images/location2.svg" alt="" className="pin" />
+            <img src="/images/location3.svg" alt="" className="location3" />
+            <img src="/images/location4.svg" alt="" className="location4" />
+            <img src="/images/location5.svg" alt="" className="location5" />
+            <img src="/images/locationCan.svg" alt="" className="locationCan" />
+            <img src="/images/locationCN.svg" alt="" className="locationCN" />
+            <img src="/images/locationEN.svg" alt="" className="locationEN" />
+            <img src="/images/locationJP2.svg" alt="" className="locationJP" />
+            <img src="/images/locationJP2.svg" alt="" className="locationJP2" />
           </Grid>
         </Grid>
       </Container>

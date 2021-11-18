@@ -143,6 +143,11 @@ hr {
   }
 }
 
+.MuiModal-root iframe {
+  width: 100%;
+  max-height: 90vh;
+}
+
 .overflow-right {
   padding-left: 24px;
 

@@ -1,9 +1,10 @@
 import WPAPI from "wpapi";
 import Config from "../config";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/layouts/Layout";
-import { Box, Button, Container, Fade, Grid, Modal } from "@mui/material";
+import { Container } from "@mui/material";
 import ReactPageScroller from "../components/react-page-scroller";
+import About from "../components/home/about";
 import Special from "../components/home/special";
 import AppCover from "./app-cover";
 import Map from "../components/home/map";
@@ -11,168 +12,82 @@ import Products from "../components/home/products";
 import History from "../components/home/history";
 import Revolution from "../components/home/revolution";
 import Footer from "../components/layouts/footer";
-import Locations from "../components/home/locations";
-// const wp = new WPAPI({ endpoint: Config.apiUrl });
 
-class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentPage: null,
-      showModal: false,
-      blockScrollUp: false,
-      blockScrollDown: false,
-    };
-  }
+const wp = new WPAPI({ endpoint: Config.apiUrl });
 
-  // static async getInitialProps() {
-  //   let apiMethod = wp.categories();
+const Index = ({
+  loading,
+  about,
+  contact,
+  history,
+  historyCat,
+  revolution,
+  featureCat,
+  features,
+  productCat,
+  products,
+  mapCat,
+  locations,
+}) => {
+  const [currentPage, setCurrentPage] = useState(null);
+  const [blockScrollUp, setBlockScrollUp] = useState(false);
 
-  // static async getInitialProps() {
-  //   let apiMethod = wp.categories();
-
-  //   return { mainTabCategory };
-  // }
-
-  componentDidMount = () => {
-    if (typeof window !== undefined && window.innerWidth < 768) {
-      this.handleBlockScrollUp(true);
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      setBlockScrollUp(window.innerWidth < 768);
     }
+  });
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(Number(pageNumber));
   };
 
-  handleBlockScrollUp = (state) => {
-    this.setState({ blockScrollUp: state });
-  };
-
-  handleBlockScrollDown = (state) => {
-    this.setState({ blockScrollDown: state });
-  };
-
-  handleModal = () => {
-    this.setState({ showModal: !this.state.showModal });
-  };
-
-  paginationClicked = (event) => {
-    this.setState({ currentPage: Number(event.target.name) });
-  };
-
-  handlePageChange = (pageNumber) => {
-    this.setState({ currentPage: pageNumber });
-  };
-
-  handleBeforePageChange = (number) => {
+  const handleBeforePageChange = (number) => {
     console.log(number);
   };
-
-  render() {
-    const { loading } = this.props;
-
-    return (
-      <Layout loading={loading} title={"Yoshinaya"}>
-        <ReactPageScroller
-          pageOnChange={this.handlePageChange}
-          onBeforePageScroll={this.handleBeforePageChange}
-          customPageNumber={this.state.currentPage}
-          renderAllPagesOnFirstRender={true}
-          blockScrollUp={this.state.blockScrollUp}
-          blockScrollDown={this.state.blockScrollDown}
-        >
-          <div className="component center home-about" key="home-about">
-            <div className="ellipse"></div>
-            <Container>
-              <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Grid item xs={12} md={5}>
-                  <div>
-                    <div className="title">
-                      <h1>Yoshinoya-н Товч танилцуулга</h1>
-                      <p className="orange">Good, Easy, Fast</p>
-                    </div>
-                    <p>
-                      Yoshinoya-н үүсэл хөгжил нь тэртээх 1899 (A&W – 1919,
-                      White Castle – 1921, MacDonald – 1940, KFC – 1952, Burger
-                      King – 1953) онд буюу одоогоос 122 жилийн өмнө Япон улс,
-                      Токио хотын хөл хөд өлгөөн ихтэй Нихонбаши загасны захаас
-                      эхэлсэн.
-                    </p>
-                    <Button
-                      onClick={this.handleModal}
-                      variant="text"
-                      className="video-btn"
-                    >
-                      <img src="/images/play-btn.svg" alt="play" />
-                      Танилцуулга үзэх
-                    </Button>
-                    <Modal
-                      open={this.state.showModal}
-                      onClose={this.handleModal}
-                      aria-labelledby="modal-modal-title"
-                      aria-describedby="modal-modal-description"
-                      closeAfterTransition
-                      BackdropProps={{
-                        timeout: 500,
-                      }}
-                    >
-                      <Fade in={this.state.showModal}>
-                        <Box>
-                          <iframe
-                            width="939"
-                            height="528"
-                            src="https://www.youtube.com/embed/xgKJgwOPZ8I"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                          ></iframe>
-                        </Box>
-                      </Fade>
-                    </Modal>
-                  </div>
-                  <div
-                    className="icon-scroll-down"
-                    onClick={() => this.handlePageChange(1)}
-                  >
-                    <span>Scroll down</span>
-                    <img src="/images/arrow-down.svg" alt="arrow down" />
-                  </div>
-                </Grid>
-                <Grid item xs={12} md={7}>
-                  <div className="relative" align="center">
-                    <img src="/images/leaf.svg" alt="" className="shape-leaf" />
-                    <div className="section-shape">
-                      <img src="/images/Vector2.svg" alt="vector2" />
-                    </div>
-                    <img src="/images/ramen.png" alt="" />
-                    <img
-                      src="/images/tomato.svg"
-                      alt="shape-tomato"
-                      className="shape-tomato"
-                    />
-                  </div>
-                </Grid>
-              </Grid>
-            </Container>
+  return (
+    <Layout loading={loading} title={"Yoshinaya"}>
+      <ReactPageScroller
+        pageOnChange={handlePageChange}
+        onBeforePageScroll={handleBeforePageChange}
+        customPageNumber={currentPage}
+        renderAllPagesOnFirstRender={true}
+        blockScrollUp={blockScrollUp}
+      >
+        <div className="component center home-about" key="home-about">
+          <div className="ellipse"></div>
+          <Container>
+            <About page={about} handleChange={handlePageChange} />
+          </Container>
+        </div>
+        <div className="component center home-products" key="home-products">
+          <div className="ellipse"></div>
+          <div className="overflow-right component center">
+            <Products
+              cat={productCat}
+              posts={products}
+              handleChange={handlePageChange}
+            />
           </div>
-          <div className="component center home-products" key="home-products">
-            <div className="ellipse"></div>
-            <div className="overflow-right component center">
-              <Products handleChange={this.handlePageChange} />
-            </div>
-          </div>
+        </div>
+        {revolution && (
           <div className="component center home-revolution">
             <div className="ellipse"></div>
             <Container>
-              <Revolution handleChange={this.handlePageChange} />
+              <Revolution page={revolution} handleChange={handlePageChange} />
             </Container>
           </div>
+        )}
+
+        {history && (
           <div className="component center history" key="home-history">
             <div className="ellipse"></div>
             <div className="overflow-right component center">
-              <History handleChange={this.handlePageChange} />
+              <History
+                cat={historyCat}
+                posts={history}
+                handleChange={handlePageChange}
+              />
             </div>
             <div className="section-shape-line">
               <img
@@ -187,36 +102,133 @@ class Index extends React.Component {
               />
             </div>
           </div>
-          <div className="component center" key="home-map">
-            <div className="ellipse"></div>
-            <Map handleChange={this.handlePageChange} />
+        )}
+        <div className="component center" key="home-map">
+          <div className="ellipse"></div>
+          <Map handleChange={handlePageChange} posts={locations} cat={mapCat} />
+        </div>
+        <div className="component center" key="home-special">
+          <div className="ellipse"></div>
+          <Special
+            posts={features}
+            cat={featureCat}
+            handleChange={handlePageChange}
+          />
+        </div>
+        <div className="component center" key="home-AppCover">
+          <div className="app-cover-footer h-100">
+            <AppCover />
+            <Footer page={contact} handleChange={handlePageChange} />
           </div>
-          <div className="component center" key="home-special">
-            <Special
-              handleChange={this.handlePageChange}
-              handleBlockScrollUp={this.handleBlockScrollUp}
-              handleBlockScrollDown={this.handleBlockScrollDown}
-            />
-          </div>
-          <div className="component center" key="home-Locations">
-            <div className="ellipse"></div>
-            <Locations
-              handleBlockScrollUp={this.handleBlockScrollUp}
-              handleBlockScrollDown={this.handleBlockScrollDown}
-            />
-          </div>
-          <div className="component center" key="home-AppCover">
-            {/* <div className="app-cover-footer"> */}
-            <div className="appcover__container">
-              <AppCover />
-              <Footer />
-            </div>
-            {/* </div> */}
-          </div>
-        </ReactPageScroller>
-      </Layout>
-    );
-  }
-}
+        </div>
+      </ReactPageScroller>
+    </Layout>
+  );
+};
+
+Index.getInitialProps = async (ctx) => {
+  const about = await wp
+    .pages()
+    .slug("about")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+
+  const revolution = await wp
+    .pages()
+    .slug("revolution")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+
+  const contact = await wp
+    .pages()
+    .slug("contact")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+
+  const historyCat = await wp
+    .categories()
+    .slug("history")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+  const history = await wp
+    .posts()
+    .categories(historyCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => console.log(err));
+
+  const featureCat = await wp
+    .categories()
+    .slug("feature")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+  const features = await wp
+    .posts()
+    .categories(featureCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => console.log(err));
+
+  const productCat = await wp
+    .categories()
+    .slug("products")
+    .embed()
+    .then((data) => {
+      return data[0];
+    });
+  const products = await wp
+    .posts()
+    .categories(productCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
+    });
+  const mapCat = await wp
+    .categories()
+    .slug("map")
+    .embed()
+    .then((data) => {
+      return data[0];
+    })
+    .catch((err) => console.log(err));
+  const locations = await wp
+    .posts()
+    .categories(mapCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
+    });
+  return {
+    about,
+    contact,
+    history,
+    historyCat,
+    revolution,
+    featureCat,
+    features,
+    productCat,
+    products,
+    mapCat,
+    locations,
+  };
+};
 
 export default Index;

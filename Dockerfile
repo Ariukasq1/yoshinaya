@@ -1,4 +1,4 @@
-FROM node:10.16-slim
+FROM node:14-slim
 WORKDIR /app
 RUN chown -R node:node /app
 USER node

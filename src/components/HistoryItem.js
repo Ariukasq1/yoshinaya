@@ -1,24 +1,29 @@
 import React from "react";
-import { ButtonBase, Grid, Typography } from "@mui/material";
+import { ButtonBase, Grid } from "@mui/material";
+import { getData } from "../utils";
 
 class HistoryItem extends React.Component {
   render() {
+    const { post } = this.props;
     return (
-      <Grid container spacing={2} className="history-item">
+      <Grid container spacing={2} className="history-item" key={post.id}>
         <Grid item>
-          <ButtonBase sx={{ width: 128, height: 128 }}>
-            <img alt="complex" src="/images/history.jpg" />
+          <ButtonBase xs={{ width: 128, height: 128 }}>
+            <img
+              alt={post.title.rendered}
+              src={getData(post._embedded, "image")}
+            />
           </ButtonBase>
         </Grid>
-        <Grid item xs={12} sm container>
+        <Grid item sm container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs>
-              <h4 className="m-0 no-margin">1899 он</h4>
+              <h4 className="m-0 no-margin">{post.title.rendered}</h4>
             </Grid>
             <Grid item className="item-content">
-              <p>
-                1899 онд Токио хотын Нихонбаши загасны зах дээр байгуулагдсан.
-              </p>
+              <div
+                dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+              />
             </Grid>
           </Grid>
         </Grid>

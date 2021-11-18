@@ -1,7 +1,8 @@
 import React from "react";
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Slider from "react-slick";
 import ProductItem from "../ProductItem";
+import { PostAddSharp } from "@mui/icons-material";
 
 class Products extends React.Component {
   render() {
@@ -16,69 +17,44 @@ class Products extends React.Component {
       centerMode: true,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 899,
-          settings: {
-            slidesToShow: 3,
           },
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1.5,
+            slidesToShow: 1,
           },
         },
       ],
     };
+    const { cat, posts } = this.props;
     return (
       <Grid container spacing={2} alignItems="center" justifyContent="center">
         <Grid item xs={12} md={4}>
           <div className="title">
-            <div className="tag">Бүтээгдэхүүн</div>
-            <h1>Хамгийн сайн амт чанарыг санал болгоно</h1>
-            <Button variant="outlined">Бүх хоол харах</Button>
+            <div className="tag">{cat && cat.name}</div>
+            <h1>{cat && cat.description}</h1>
+            {/* <Button variant="outlined">Бүх хоол харах</Button> */}
           </div>
           <div
             className="icon-scroll-down"
             onClick={() => this.props.handleChange(2)}
           >
             <span>Scroll down</span>
-            <img
-              src="/images/arrow-down.svg"
-              alt="arrow down"
-              className="up-down-anim"
-            />
+            <img src="/images/arrow-down.gif" alt="arrow down" />
           </div>
         </Grid>
         <Grid item xs={12} md={8}>
-          <Slider {...settings}>
-            <div>
-              <ProductItem />
-            </div>
-            <div>
-              <ProductItem />
-            </div>
-            <div>
-              <ProductItem />
-            </div>
-            <div>
-              <ProductItem />
-            </div>
-            <div>
-              <ProductItem />
-            </div>
-          </Slider>
+          {PostAddSharp && (
+            <Slider {...settings}>
+              {posts.map((post) => (
+                <ProductItem post={post} key={post.id} />
+              ))}
+            </Slider>
+          )}
         </Grid>
       </Grid>
     );

@@ -19,66 +19,41 @@ class History extends React.Component {
       autoplaySpeed: 2000,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 899,
-          settings: {
-            slidesToShow: 3,
           },
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
+            centerMode: false,
             slidesToShow: 1,
           },
         },
       ],
     };
+    const { cat, posts } = this.props;
     return (
       <Grid container spacing={2} alignItems="center" justifyContent="center">
         <Grid item xs={12}>
           <div className="title mb-2">
-            <div className="tag">Үүсэл хөгжил</div>
-            <h1>Түүхэн замнал</h1>
+            {cat.acf && cat.acf.tag && <div className="tag">{cat.acf.tag}</div>}
+            <h1>{cat.name}</h1>
           </div>
-
-          <Slider {...settings}>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-            <div>
-              <HistoryItem />
-            </div>
-          </Slider>
+          {posts && posts.length > 0 && (
+            <Slider {...settings}>
+              {posts.map((post) => (
+                <HistoryItem post={post} key={post.id} />
+              ))}
+            </Slider>
+          )}
           <div
             className="icon-scroll-down"
             onClick={() => this.props.handleChange(4)}
           >
             <span>Scroll down</span>
-            <img
-              src="/images/arrow-down.svg"
-              alt="arrow down"
-              className="up-down-anim"
-            />
+            <img src="/images/arrow-down.gif" alt="arrow down" />
           </div>
         </Grid>
       </Grid>

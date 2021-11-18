@@ -1,0 +1,347 @@
+@import "./base/variables.scss";
+@import "./base/mixins.scss";
+
+.ellipse {
+  position: absolute;
+  left: 65%;
+  right: -1%;
+  top: -5.78%;
+  bottom: 50.16%;
+  background: radial-gradient(50% 50% at 50% 50%,
+      #ff7800 0%,
+      rgba(255, 120, 0, 0) 100%);
+  opacity: 0.5;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.component {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.section-shape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.9;
+  animation: rotatedHalfTwo 10s alternate infinite linear;
+  z-index: -1;
+
+  img {
+    max-width: 90%;
+  }
+
+  &:before {
+    content: url(../images/Vector1.svg);
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    animation: rotatedHalfTwo 12s alternate infinite linear;
+  }
+}
+
+.section-shape-line {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 10vh;
+  opacity: 0.9;
+  z-index: -1;
+
+  img {
+    animation: navigate 10s infinite linear;
+
+    &:first-child {
+      animation: navigate 15s infinite linear;
+    }
+  }
+}
+
+.shape-leaf {
+  position: absolute;
+  left: 40%;
+  top: -5rem;
+  width: 7rem;
+}
+
+.shape-tomato {
+  position: absolute;
+  bottom: -4rem;
+  right: 30%;
+  width: 7rem;
+}
+
+.title {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 0;
+    letter-spacing: -0.5px;
+  }
+
+  .orange {
+    color: $main-color;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    color: $main-color;
+    text-transform: initial;
+    border-color: $main-color;
+    text-align: center;
+    letter-spacing: 0.0125em;
+    padding: 0.5rem 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  color: $text-secondary-color;
+  margin-right: 1rem;
+}
+
+.video-btn {
+  color: $text-secondary-color;
+  text-transform: initial;
+
+  img {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+}
+
+.MuiBox-root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  // boxShadow: 24,
+}
+
+.icon-scroll-down {
+  position: absolute;
+  display: inline-grid;
+  text-align: center;
+  bottom: 1rem;
+  color: #cbd2d9;
+  letter-spacing: 0.5px;
+  @include transition(all 0.3s ease-in-out);
+
+  .rotate {
+    transform: rotate(180deg);
+    overflow: hidden;
+  }
+
+  img {
+    margin: auto;
+    width: 40px;
+    -moz-animation: bounce 1.2s infinite;
+    -webkit-animation: bounce 1.2s infinite;
+    animation: bounce 1.2s infinite;
+  }
+
+  &:hover {
+    color: #989fa7;
+    cursor: pointer;
+  }
+}
+
+.home-products {
+  .MuiCard-root.product-item {
+    box-shadow: 0px 1px 8px 0 rgba(0, 0, 0, 0.06),
+      0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+
+    .loyalty {
+      background-color: $main-color;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .MuiCardMedia-img {
+      object-fit: contain;
+      height: 200px;
+      object-position: center;
+    }
+
+    .MuiCardContent-root {
+      color: $text-color;
+
+      h4 {
+        color: $text-secondary-color;
+        margin: 0;
+      }
+    }
+
+    .price {
+      color: $main-color;
+      font-weight: 600;
+      padding: 0 0.5rem 0.5rem;
+    }
+  }
+}
+
+.home-revolution .img {
+  max-height: 40vh;
+  object-fit: contain;
+  object-position: right;
+  float: right;
+
+}
+
+.history-item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 0;
+  width: 100%;
+
+  img {
+    max-height: 200px;
+    padding-bottom: 1rem;
+  }
+
+  h4 {
+    color: $text-secondary-color;
+    font-weight: 700;
+  }
+
+  .item-content {
+    padding-top: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.app-cover-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 7rem;
+}
+
+.slick-list {
+  margin: 0 -0.5rem;
+  padding: 0 8% 0 0 !important;
+}
+
+.slick-slide>div {
+  padding: 0 0.5rem;
+}
+
+.up-down-anim {
+  animation: upDown 1.2s infinite;
+}
+
+.zoom-in {
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    @include imgCenter;
+    transition: $transition;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
+@-webkit-keyframes rotatedHalfTwo {
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotatedHalfTwo {
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+
+@keyframes navigate {
+  10% {
+    transform: rotate(0deg) translate(-5px, 0.5vh);
+  }
+
+  50% {
+    transform: rotate(-2deg) translate(-0.5vh, 5px);
+  }
+
+  25%,
+  75% {
+    transform: rotate(1deg) translate(5px, 0.5vh);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  75% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

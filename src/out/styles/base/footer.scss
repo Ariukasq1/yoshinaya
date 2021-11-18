@@ -1,0 +1,110 @@
+@import "./variables.scss";
+
+.footer-container {
+    footer {
+        margin-bottom: 2rem;
+
+        .content {
+            padding: 0 4rem;
+
+            .address-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .address {
+                    max-width: 40%;
+                    padding: 0;
+                    color: $text-secondary-color;
+                }
+
+                .icons {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-bottom: 1.25rem;
+                    gap: 1rem;
+
+                    a {
+                        position: relative;
+                        color: #616e7c;
+
+                        &:visited {
+                            color: #616e7c;
+                        }
+
+                        svg {
+                            text-align: center;
+                            cursor: pointer;
+                            transition: ease-out 0.3s;
+                        }
+                    }
+
+                    .facebook-link {
+                        &:hover {
+                            filter: invert(35%) sepia(26%) saturate(1170%) hue-rotate(181deg) brightness(100%) contrast(100%);
+                        }
+                    }
+
+                    .twitter-link {
+                        &:hover {
+                            filter: invert(59%) sepia(79%) saturate(513%) hue-rotate(178deg) brightness(80%) contrast(98%);
+                        }
+                    }
+
+                    .instagram-link {
+                        .bg {
+                            width: calc(100% - 1px);
+                            background: #000;
+                            display: block;
+
+                            &::before {
+                                content: "";
+                                background: -moz-linear-gradient(45deg,
+                                        #f09433 0%,
+                                        #e6683c 25%,
+                                        #dc2743 50%,
+                                        #cc2366 75%,
+                                        #bc1888 100%);
+                                background: -webkit-linear-gradient(45deg,
+                                        #f09433 0%,
+                                        #e6683c 25%,
+                                        #dc2743 50%,
+                                        #cc2366 75%,
+                                        #bc1888 100%);
+                                background: linear-gradient(45deg,
+                                        #f09433 0%,
+                                        #e6683c 25%,
+                                        #dc2743 50%,
+                                        #cc2366 75%,
+                                        #bc1888 100%);
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                width: 100%;
+                                opacity: 0;
+                                transition: 0.3s ease-in-out;
+                            }
+
+                            .inner {
+                                background: #fcfcfc;
+                                mix-blend-mode: screen;
+                                display: block;
+                                width: 25px;
+                            }
+                        }
+
+                        &:hover .bg::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .copyright {
+                    color: $text-secondary-color;
+                }
+            }
+        }
+    }
+}

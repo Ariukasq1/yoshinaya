@@ -1,0 +1,225 @@
+@import "./base/variables.scss";
+
+// special js
+.special-ramen {
+    max-height: 100%;
+    max-width: 25vw;
+    margin: auto;
+
+    .section-shape:before {
+        display: none;
+    }
+
+    .shape-tomato,
+    .shape-leaf {
+        width: 5rem;
+    }
+}
+
+.title-margin {
+    margin-top: 1.1rem;
+}
+
+.scroll-container {
+    overflow-y: scroll;
+    height: 56vh;
+    transition: all 1s;
+    scroll-snap-type: y mandatory;
+    scrollbar-color: $main-color $scroll-color;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $scroll-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $main-color;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $border-color;
+    }
+
+    .scroll-item {
+        display: flex;
+        margin-bottom: 2rem;
+
+        img {
+            width: 4vh;
+            height: 4vh;
+            padding: 1.5rem;
+            border-radius: 50%;
+            border: 1px solid $gray;
+        }
+
+        .title-with-text {
+            margin-left: 2.3rem;
+            margin-top: 1rem;
+
+            p {
+                overflow-wrap: break-word;
+                max-width: 72%;
+            }
+
+            h4 {
+                letter-spacing: 0;
+                color: $text-secondary-color;
+                margin-bottom: 1.06rem;
+            }
+        }
+    }
+}
+
+.scroll-chrome {
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $scroll-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $main-color;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $border-color;
+    }
+}
+
+// app-cover.js
+.background-style {
+    background-color: $background-color;
+    height: 43vh;
+    display: flex;
+    border-radius: 8px;
+    position: relative;
+
+    .app-content {
+        padding-left: 4rem;
+        padding-top: 3.5rem;
+        align-self: flex-start;
+
+        h2 {
+            font-size: 1.9rem;
+            line-height: 1.3;
+            color: $text-secondary-color;
+        }
+
+        .store-images {
+            img {
+                margin-right: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .app-cover-img {
+        position: absolute;
+        top: -20%;
+        right: -10%;
+    }
+}
+
+// map.js
+.grid-map {
+	position: relative;
+	.location1 {
+		position: absolute;
+		transition: all 0.5s;
+		left: 33%;
+		top: 0;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationCan {
+		position: absolute;
+		transition: all 0.5s;
+		left: 18%;
+		top: 15%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationEN {
+		position: absolute;
+		transition: all 0.5s;
+		left: 30%;
+		top: 50%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location2 {
+		position: absolute;
+		transition: all 0.5s;
+		left: 45%;
+		top: 28%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location5 {
+		position: absolute;
+		transition: all 0.5s;
+		left: 53%;
+		top: 50%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location3 {
+		position: absolute;
+		transition: all 0.5s;
+		right: 34%;
+		top: 23%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationCN {
+		position: absolute;
+		transition: all 0.5s;
+		right: 28%;
+		top: 26%;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.location4 {
+		position: absolute;
+		transition: all 0.5s;
+		right: 21%;
+		top: 34%;
+		z-index: 1;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationJP {
+		position: absolute;
+		transition: all 0.5s;
+		right: 21%;
+		top: 12%;
+		
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+	.locationJP2 {
+		position: absolute;
+		transition: all 0.5s;
+		right: 10%;
+		top: 43%;
+		
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}

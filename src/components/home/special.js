@@ -21,7 +21,14 @@ class Special extends React.Component {
   render() {
     const { cat, posts } = this.props;
     return (
-      <Container className="relative h-100 flex align-center">
+      <Container className="relative flex h-100 align-center">
+        <div
+          className="icon-scroll-down"
+          onClick={() => this.props.handleChange(6)}
+        >
+          <span>Scroll down</span>
+          <img src="/images/arrow-down.gif" alt="arrow down" />
+        </div>
         <Grid container spacing={6} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={7}>
             <div className="content-special">
@@ -55,13 +62,6 @@ class Special extends React.Component {
                   className="shape-tomato"
                 />
               </div>
-            </div>
-            <div
-              className="icon-scroll-down"
-              onClick={() => this.props.handleChange(6)}
-            >
-              <span>Scroll down</span>
-              <img src="/images/arrow-down.gif" alt="arrow down" />
             </div>
           </Grid>
           <Grid item xs={12} md={5}>

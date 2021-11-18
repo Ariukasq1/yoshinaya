@@ -17,7 +17,7 @@ class Products extends React.Component {
       centerMode: true,
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
           },

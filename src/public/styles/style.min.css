@@ -476,7 +476,7 @@ header .tool-bar .nav-links .menu-btn {
 }
 .grid-map img:not(:first-child) {
   position: absolute;
-  transition: ease-in-out 0.8s;
+  transition: all 0.7s;
   cursor: pointer;
 }
 .grid-map img:not(:first-child):hover {

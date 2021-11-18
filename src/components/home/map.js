@@ -28,7 +28,14 @@ class Map extends React.Component {
 					</Grid>
 					{posts && posts.length > 0 && (
 						<Grid item xs={12} md={7} className="grid-map">
-							<img src="/images/map.svg" alt="map" />
+							<img
+								src={
+									cat && cat.acf && cat.acf.image
+										? cat.acf.image
+										: "/images/mapBackground.svg"
+								}
+								alt="map"
+							/>
 							{posts.map((post) => (
 								<img
 									key={post.id}

@@ -132,7 +132,7 @@
 	img {
 		&:not(:first-child) {
 			position: absolute;
-			transition: ease-in-out .8s;
+			transition: all .7s;
 			cursor: pointer;
 			&:hover {
 				-webkit-animation: MoveUpDown 1s ease-in-out infinite;

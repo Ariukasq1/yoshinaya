@@ -40,7 +40,7 @@
   }
   .react-scroll-page-wrapper {
     height: initial !important;
-
+    width: 100% !important;
     .react-scroll-page {
       transform: none !important;
       transition: none !important;
@@ -113,16 +113,32 @@
 }
 @media only screen and (max-width: 576px) {
   .locations {
+    &__grid {
+      margin-left: 0 !important;
+      width: 100% !important;
+      margin-top: 0 !important;
+    }
     &__item {
+      position: relative;
+      z-index: 1;
       flex-direction: column;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba($color: $main-color, $alpha: 0.16),
+        0px 0px 1px rgba($color: $main-color, $alpha: 0.08);
+      padding: 0 0 14px 0 !important;
+      background-color: $color-white;
       img {
         width: 100% !important;
         height: 200px;
+        border-radius: 8px 8px 0 0 !important;
       }
       &__content {
+        box-sizing: border-box;
         width: 100% !important;
-        h1 {
-          margin-top: 16px;
+        border-radius: 0 0 8px 8px;
+        h3 {
+          padding-top: 16px;
         }
       }
     }
@@ -130,6 +146,13 @@
       overflow-x: hidden;
       overflow-y: visible;
       max-height: auto;
+      display: none;
+    }
+    &__slider {
+      display: block !important;
+    }
+    &__map {
+      margin-top: 24px !important;
     }
   }
 }

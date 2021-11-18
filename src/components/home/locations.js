@@ -1,12 +1,10 @@
 import React from "react";
 import MyGoogleMap from "../map/MyGoogleMap";
 import { Container, Grid } from "@mui/material";
-import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
-import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
+import Slider from "react-slick";
 
+import LocationItem from "../LocationItem";
 const Locations = ({ handleBlockScrollUp, handleBlockScrollDown }) => {
-  const xasleasing = "/images/xasleasing.jpg";
   const handleOnMouseOver = () => {
     handleBlockScrollDown(true);
     handleBlockScrollUp(true);
@@ -17,106 +15,46 @@ const Locations = ({ handleBlockScrollUp, handleBlockScrollDown }) => {
       handleBlockScrollUp(false);
     }
   };
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: false,
+    speed: 500,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
+  };
   return (
     <Container>
-      <Grid container spacing={3} alignItems="center" justifyContent="center">
+      <Grid
+        container
+        spacing={3}
+        alignItems="center"
+        justifyContent="center"
+        className="locations__grid"
+      >
         <Grid item xs={12} md={6}>
           <div
             className="scroll-container scroll-chrome locations__scroll"
             onMouseOver={handleOnMouseOver}
             onMouseOut={handleOnMouseOut}
           >
-            <div className="locations__item">
-              <img src={xasleasing} alt="" />
-              <div className="locations__item__content">
-                <h3>Tөв салбар</h3>
-                <ul>
-                  <li>
-                    <span className="-rotate">
-                      <PushPinOutlinedIcon />
-                    </span>
-                    <div>
-                      Монгол улс, Улаанбаатар, Сүхбаатар дүүрэг - 14240, 1-р
-                      хороо, 5-р хороолол, Чингисийн өргөн чөлөө, Бизнес Тауэр,
-                      16 давхар
-                    </div>
-                  </li>
-                  <li>
-                    <span>
-                      <AccessTimeOutlinedIcon />
-                    </span>
-                    <div>Даваа - Баасан 09:00-18:00, Бямба, Ням амарна</div>
-                  </li>
-                  <li>
-                    <span>
-                      <CallOutlinedIcon />
-                    </span>
-                    <div>98989455</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="locations__item">
-              <img src={xasleasing} alt="" />
-              <div className="locations__item__content">
-                <h3>Tөв салбар</h3>
-                <ul>
-                  <li>
-                    <span className="-rotate">
-                      <PushPinOutlinedIcon />
-                    </span>
-                    <div>
-                      Монгол улс, Улаанбаатар, Сүхбаатар дүүрэг - 14240, 1-р
-                      хороо, 5-р хороолол, Чингисийн өргөн чөлөө, Бизнес Тауэр,
-                      16 давхар
-                    </div>
-                  </li>
-                  <li>
-                    <span>
-                      <AccessTimeOutlinedIcon />
-                    </span>
-                    <div>Даваа - Баасан 09:00-18:00, Бямба, Ням амарна</div>
-                  </li>
-                  <li>
-                    <span>
-                      <CallOutlinedIcon />
-                    </span>
-                    <div>98989455</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="locations__item">
-              <img src={xasleasing} alt="" />
-              <div className="locations__item__content">
-                <h3>Tөв салбар</h3>
-                <ul>
-                  <li>
-                    <span className="-rotate">
-                      <PushPinOutlinedIcon />
-                    </span>
-                    <div>
-                      Монгол улс, Улаанбаатар, Сүхбаатар дүүрэг - 14240, 1-р
-                      хороо, 5-р хороолол, Чингисийн өргөн чөлөө, Бизнес Тауэр,
-                      16 давхар
-                    </div>
-                  </li>
-                  <li>
-                    <span>
-                      <AccessTimeOutlinedIcon />
-                    </span>
-                    <div>Даваа - Баасан 09:00-18:00, Бямба, Ням амарна</div>
-                  </li>
-                  <li>
-                    <span>
-                      <CallOutlinedIcon />
-                    </span>
-                    <div>98989455</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <LocationItem />
+            <LocationItem />
+            <LocationItem />
           </div>
+          <Slider className="locations__slider">
+            <div className="locations__slider__item">
+              <LocationItem />
+            </div>
+            <div>
+              <LocationItem />
+            </div>
+            <div>
+              <LocationItem />
+            </div>
+          </Slider>
         </Grid>
         <Grid
           item

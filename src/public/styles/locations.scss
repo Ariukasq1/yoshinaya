@@ -4,6 +4,14 @@
     height: 50vh;
     & > div {
       height: 50vh;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+  &__slider {
+    display: none;
+    &__item {
+      padding-right: 16px;
     }
   }
   &__item {
@@ -16,6 +24,7 @@
       width: 25%;
       object-fit: cover;
       min-height: 100%;
+      border-radius: 8px;
     }
     &__content {
       width: 75%;
@@ -52,6 +61,14 @@
           line-height: 1.4;
         }
       }
+    }
+  }
+  &__marker {
+    color: $red-color;
+    height: auto;
+    width: auto;
+    svg {
+      font-size: 2.5rem;
     }
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import propTypes from "prop-types";
 import GoogleMapReact from "google-map-react";
+import Marker from "./Marker";
 const MyGoogleMap = () => {
   const center = {
     lat: 47.8920382,
@@ -20,7 +21,7 @@ const MyGoogleMap = () => {
       debounced={true}
       yesIWantToUseGoogleMapApiInternals
     >
-      {}
+      <Marker lat={center.lat} lng={center.lng} />
     </GoogleMapReact>
   );
 };

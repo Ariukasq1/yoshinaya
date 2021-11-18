@@ -7,11 +7,13 @@
   right: -1%;
   top: -5.78%;
   bottom: 50.16%;
-  background: radial-gradient(50% 50% at 50% 50%,
-      #ff7800 0%,
-      rgba(255, 120, 0, 0) 100%);
-  opacity: 0.5;
-  filter: blur(100px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ff7800 0%,
+    rgba(255, 120, 0, 0) 100%
+  );
+  opacity: 0.4;
+  filter: blur(110px);
   z-index: -1;
 }
 
@@ -196,7 +198,6 @@
   object-fit: contain;
   object-position: right;
   float: right;
-
 }
 
 .history-item {
@@ -231,7 +232,7 @@
   padding: 0 8% 0 0 !important;
 }
 
-.slick-slide>div {
+.slick-slide > div {
   padding: 0 0.5rem;
 }
 
@@ -254,7 +255,6 @@
     }
   }
 }
-
 
 @-webkit-keyframes rotatedHalfTwo {
   0% {
@@ -280,7 +280,6 @@
   }
 }
 
-
 @keyframes navigate {
   10% {
     transform: rotate(0deg) translate(-5px, 0.5vh);
@@ -297,7 +296,6 @@
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,

@@ -63,7 +63,7 @@ class Footer extends React.Component {
         >
           <span>Эхлэх</span>
           <div className="rotate">
-            <img src="/images/arrow-up.gif" alt="arrow up" className="" />
+            <img src="/images/arrow-down.gif" alt="arrow up" className="" />
           </div>
         </div>
       </Container>

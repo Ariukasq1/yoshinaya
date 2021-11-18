@@ -19,7 +19,7 @@ class History extends React.Component {
       autoplaySpeed: 2000,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
           },

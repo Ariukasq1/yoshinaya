@@ -470,8 +470,6 @@ header {
     height: 50vh;
     border-radius: 8px;
     overflow: hidden; }
-.locations__slider__item {
-  padding-right: 16px; }
 .locations__item {
   display: flex;
   justify-content: center;
@@ -516,6 +514,69 @@ header {
   width: auto; }
   .locations__marker svg {
     font-size: 2.5rem; }
+
+.map .marker {
+  max-height: 40px;
+  max-width: 40px;
+  object-fit: contain; }
+.map.h-100 {
+  height: 100%; }
+
+.marker-content {
+  position: absolute;
+  top: -135px;
+  left: -138px;
+  background: #fff;
+  width: 350px;
+  min-height: 60px;
+  z-index: 999;
+  box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 8px; }
+  .marker-content .arrow {
+    bottom: -7px;
+    border-color: transparent #fff #fff transparent;
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: 0 0;
+    border-style: solid;
+    border-width: 8px;
+    left: 45%;
+    transform: translateX(-50%) rotate(45deg); }
+  .marker-content .branch-info {
+    color: #616e7c; }
+    .marker-content .branch-info img {
+      width: 50%;
+      margin-right: 1rem;
+      min-height: 120px;
+      height: 100%;
+      object-fit: cover; }
+    .marker-content .branch-info .pin {
+      width: 50px; }
+    .marker-content .branch-info .branch-descr {
+      padding: 8px 8px 8px 0;
+      font-size: 13px; }
+      .marker-content .branch-info .branch-descr p {
+        margin-bottom: 0; }
+      .marker-content .branch-info .branch-descr img {
+        min-height: 20px;
+        height: 20px;
+        object-fit: contain; }
+  .marker-content .close {
+    position: absolute;
+    right: 7px;
+    top: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #ff7800; }
+
+.marker {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  color: #e94233;
+  position: relative; }
 
 .ellipse {
   position: absolute;
@@ -775,14 +836,6 @@ header {
 
   .scroll-container {
     height: 30vh; } }
-@media only screen and (max-width: 767px) {
-  .MuiGrid-item {
-    padding-left: 0 !important;
-    padding-top: 0 !important; }
-
-  .title h1 {
-    font-size: 2rem;
-    line-height: 2.4rem; } }
 @media only screen and (max-width: 991px) {
   .title h1 {
     font-size: 1.8rem;
@@ -829,12 +882,15 @@ header {
       position: relative;
       margin-top: -10%; } }
 @media only screen and (max-width: 767px) {
+  .locations .MuiGrid-item {
+    padding-left: 0 !important;
+    padding-top: 0 !important; }
+
   .title h1 {
     font-size: 1.6rem;
     line-height: 2rem; }
 
   .history-item {
-    display: flex;
     flex-wrap: initial; }
 
   .footer-container footer .content {

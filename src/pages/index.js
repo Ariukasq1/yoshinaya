@@ -29,6 +29,8 @@ const Index = ({
   products,
   mapCat,
   locations,
+  locsCat,
+  localLocations,
 }) => {
   const [currentPage, setCurrentPage] = useState(null);
   const [blockScrollUp, setBlockScrollUp] = useState(false);
@@ -125,9 +127,11 @@ const Index = ({
             handleBlockScrollDown={handleBlockScrollDown}
           />
         </div>
-        <div className="component center" key="home-Locations">
+        <div className="component center locations" key="home-Locations">
           <div className="ellipse"></div>
           <Locations
+            locations={localLocations}
+            cat={locsCat}
             handleBlockScrollUp={handleBlockScrollUp}
             handleBlockScrollDown={handleBlockScrollDown}
           />
@@ -233,6 +237,23 @@ Index.getInitialProps = async (ctx) => {
     .then((data) => {
       return data;
     });
+  const locsCat = await wp
+    .categories()
+    .slug("locations")
+    .embed()
+    .then((data) => {
+      return data[0];
+    })
+    .catch((err) => console.log(err));
+  const localLocations = await wp
+    .posts()
+    .categories(locsCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
+    });
+
   return {
     about,
     contact,
@@ -245,6 +266,8 @@ Index.getInitialProps = async (ctx) => {
     products,
     mapCat,
     locations,
+    locsCat,
+    localLocations,
   };
 };
 

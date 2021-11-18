@@ -6,7 +6,7 @@ class Special extends React.Component {
   renderPostItem(post) {
     return (
       <div className="scroll-item" key={post.id}>
-        <img src={getData(post._embedded, "image")} alt="like emoji" />
+        <img src={getData(post._embedded, "image")} alt={post.title.rendered} />
         <div className="title-with-text">
           <h4 className="no-margin">{post.title.rendered}</h4>
           <div

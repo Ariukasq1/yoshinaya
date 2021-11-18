@@ -40,10 +40,6 @@ class Marker extends React.Component {
           {this.renderContent()}
         </div>
       </div>
-
-      // <Popover className="branch-info" content={this.renderContent()} title={this.props.title} trigger="click">
-      //     <img className="marker" src="/images/marker.png" alt={this.props.title} />
-      // </Popover>
     );
   }
 }

@@ -70,19 +70,6 @@ class GoogleMapComponent extends React.Component {
         yesIWantToUseGoogleMapApiInternals
       >
         {this.renderContent()}
-        {/* <Marker
-          title="hi"
-          lat={47.89000063039751}
-          lng={106.90697601853734}
-          img={
-            "http://yoshinaya.nmma.co/wp/wp-content/uploads/2021/11/xasleasing.jpg"
-          }
-          addr="hadsfkjasdh asdf"
-          key="1"
-          currentMarkerTitle="hi"
-          onClick={this.onClickMarker}
-          currentMarkerTitle={this.state.currentMarkerTitle}
-        /> */}
       </GoogleMapReact>
     );
   }

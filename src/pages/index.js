@@ -12,6 +12,7 @@ import Products from "../components/home/products";
 import History from "../components/home/history";
 import Revolution from "../components/home/revolution";
 import Footer from "../components/layouts/footer";
+import Locations from "../components/home/locations";
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -31,12 +32,12 @@ const Index = ({
 }) => {
   const [currentPage, setCurrentPage] = useState(null);
   const [blockScrollUp, setBlockScrollUp] = useState(false);
-
+  const [blockScrollDown, setBlockScrollDown] = useState(false);
   useEffect(() => {
     if (typeof window !== undefined) {
       setBlockScrollUp(window.innerWidth < 768);
     }
-  });
+  }, []);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(Number(pageNumber));
@@ -44,6 +45,12 @@ const Index = ({
 
   const handleBeforePageChange = (number) => {
     console.log(number);
+  };
+  const handleBlockScrollDown = (state) => {
+    setBlockScrollDown(state);
+  };
+  const handleBlockScrollUp = (state) => {
+    setBlockScrollUp(state);
   };
   return (
     <Layout loading={loading} title={"Yoshinaya"}>
@@ -53,6 +60,7 @@ const Index = ({
         customPageNumber={currentPage}
         renderAllPagesOnFirstRender={true}
         blockScrollUp={blockScrollUp}
+        blockScrollDown={blockScrollDown}
       >
         <div className="component center home-about" key="home-about">
           <div className="ellipse"></div>
@@ -113,6 +121,15 @@ const Index = ({
             posts={features}
             cat={featureCat}
             handleChange={handlePageChange}
+            handleBlockScrollUp={handleBlockScrollUp}
+            handleBlockScrollDown={handleBlockScrollDown}
+          />
+        </div>
+        <div className="component center" key="home-Locations">
+          <div className="ellipse"></div>
+          <Locations
+            handleBlockScrollUp={handleBlockScrollUp}
+            handleBlockScrollDown={handleBlockScrollDown}
           />
         </div>
         <div className="component center" key="home-AppCover">

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import propTypes from "prop-types";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
 const MyGoogleMap = () => {
+  const [currentMarkerTitle, setCurrentMarkerTitle] = useState("");
   const center = {
     lat: 47.8920382,
     lng: 106.9082375,
@@ -21,7 +22,11 @@ const MyGoogleMap = () => {
       debounced={true}
       yesIWantToUseGoogleMapApiInternals
     >
-      <Marker lat={center.lat} lng={center.lng} />
+      <Marker
+        lat={center.lat}
+        lng={center.lng}
+        currentMarkerTitle={currentMarkerTitle}
+      />
     </GoogleMapReact>
   );
 };

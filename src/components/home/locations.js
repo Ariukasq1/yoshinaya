@@ -34,12 +34,14 @@ const Locations = ({ handleBlockScrollUp, handleBlockScrollDown }) => {
         justifyContent="center"
         className="locations__grid"
       >
-        <Grid item xs={12} md={6}>
-          <div
-            className="scroll-container scroll-chrome locations__scroll"
-            onMouseOver={handleOnMouseOver}
-            onMouseOut={handleOnMouseOut}
-          >
+        <Grid
+          item
+          xs={12}
+          md={6}
+          onMouseEnter={handleOnMouseOver}
+          onMouseLeave={handleOnMouseOut}
+        >
+          <div className="scroll-container scroll-chrome locations__scroll">
             <LocationItem />
             <LocationItem />
             <LocationItem />

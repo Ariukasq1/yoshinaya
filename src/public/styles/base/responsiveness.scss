@@ -1,4 +1,14 @@
-@media only screen and (max-width: 1536px) {}
+@media only screen and (max-width: 1536px) {
+
+  .app-cover-footer {
+    gap: 4rem;
+  }
+
+  .background-style .app-content h2 {
+    margin-top: 0;
+  }
+
+}
 
 @media only screen and (max-width: 1200px) {
   .title h1 {

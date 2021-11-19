@@ -56,7 +56,7 @@ const Index = ({
       >
         <div className="component center home-about" key="home-about">
           <div className="ellipse"></div>
-          <Container>
+          <Container maxWidth="xl">
             <About page={about} handleChange={handlePageChange} />
           </Container>
         </div>

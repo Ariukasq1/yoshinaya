@@ -1,7 +1,13 @@
+@media only screen and (max-width: 1536px) {}
+
 @media only screen and (max-width: 1200px) {
   .title h1 {
     font-size: 2rem;
     line-height: 2.4rem;
+  }
+
+  .footer-container footer {
+    margin-bottom: 2rem;
   }
 }
 

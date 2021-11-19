@@ -145,6 +145,12 @@ hr {
     padding-left: 24px;
   }
 }
+@media (min-width: 1536px) {
+  .overflow-right {
+    margin-left: calc((100vw - 1536px) / 2);
+    padding-left: 24px;
+  }
+}
 
 @media (min-width: 600px) {
   .MuiContainer-root {
@@ -161,6 +167,11 @@ hr {
 @media (min-width: 1200px) {
   .MuiContainer-root {
     max-width: 1200px !important;
+  }
+}
+@media (min-width: 1536px) {
+  .MuiContainer-root {
+    max-width: 1536px !important;
   }
 }
 header {
@@ -298,7 +309,7 @@ header .tool-bar .nav-links .menu-btn {
 }
 
 .footer-container footer {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .footer-container footer .content {
   padding: 0 4rem;
@@ -450,11 +461,10 @@ header .tool-bar .nav-links .menu-btn {
   display: flex;
   border-radius: 8px;
   position: relative;
+  align-items: center;
 }
 .background-style .app-content {
-  padding-left: 4rem;
-  padding-top: 3.5rem;
-  align-self: flex-start;
+  padding: 0 4rem;
 }
 .background-style .app-content h2 {
   font-size: 1.9rem;
@@ -806,6 +816,10 @@ header .tool-bar .nav-links .menu-btn {
   .title h1 {
     font-size: 2rem;
     line-height: 2.4rem;
+  }
+
+  .footer-container footer {
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (max-width: 991px) {

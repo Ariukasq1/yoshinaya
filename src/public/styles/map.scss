@@ -99,11 +99,10 @@
 	display: flex;
 	border-radius: 8px;
 	position: relative;
+	align-items: center;
 
 	.app-content {
-		padding-left: 4rem;
-		padding-top: 3.5rem;
-		align-self: flex-start;
+		padding: 0 4rem;
 
 		h2 {
 			font-size: 1.9rem;
@@ -129,11 +128,13 @@
 // map.js
 .grid-map {
 	position: relative;
+
 	img {
 		&:not(:first-child) {
 			position: absolute;
 			transition: all .7s;
 			cursor: pointer;
+
 			&:hover {
 				-webkit-animation: MoveUpDown 1s ease-in-out infinite;
 				animation: MoveUpDown 1s ease-in-out infinite;
@@ -146,9 +147,11 @@
 	0% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-8px);
 	}
+
 	100% {
 		transform: translateY(0);
 	}
@@ -158,9 +161,11 @@
 	0% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-8px);
 	}
+
 	100% {
 		transform: translateY(0);
 	}

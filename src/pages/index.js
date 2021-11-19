@@ -12,6 +12,7 @@ import Products from "../components/home/products";
 import History from "../components/home/history";
 import Revolution from "../components/home/revolution";
 import Footer from "../components/layouts/footer";
+import Locations from "../components/home/locations";
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -28,15 +29,17 @@ const Index = ({
   products,
   mapCat,
   locations,
+  locsCat,
+  localLocations,
 }) => {
   const [currentPage, setCurrentPage] = useState(null);
   const [blockScrollUp, setBlockScrollUp] = useState(false);
-
+  const [blockScrollDown, setBlockScrollDown] = useState(false);
   useEffect(() => {
     if (typeof window !== undefined) {
       setBlockScrollUp(window.innerWidth < 768);
     }
-  });
+  }, []);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(Number(pageNumber));
@@ -44,6 +47,12 @@ const Index = ({
 
   const handleBeforePageChange = (number) => {
     console.log(number);
+  };
+  const handleBlockScrollDown = (state) => {
+    setBlockScrollDown(state);
+  };
+  const handleBlockScrollUp = (state) => {
+    setBlockScrollUp(state);
   };
   return (
     <Layout loading={loading} title={"Yoshinaya"}>
@@ -53,6 +62,7 @@ const Index = ({
         customPageNumber={currentPage}
         renderAllPagesOnFirstRender={true}
         blockScrollUp={blockScrollUp}
+        blockScrollDown={blockScrollDown}
       >
         <div className="component center home-about" key="home-about">
           <div className="ellipse"></div>
@@ -113,6 +123,17 @@ const Index = ({
             posts={features}
             cat={featureCat}
             handleChange={handlePageChange}
+            handleBlockScrollUp={handleBlockScrollUp}
+            handleBlockScrollDown={handleBlockScrollDown}
+          />
+        </div>
+        <div className="component center locations" key="home-Locations">
+          <div className="ellipse"></div>
+          <Locations
+            locations={localLocations}
+            cat={locsCat}
+            handleBlockScrollUp={handleBlockScrollUp}
+            handleBlockScrollDown={handleBlockScrollDown}
           />
         </div>
         <div className="component center" key="home-AppCover">
@@ -216,6 +237,23 @@ Index.getInitialProps = async (ctx) => {
     .then((data) => {
       return data;
     });
+  const locsCat = await wp
+    .categories()
+    .slug("locations")
+    .embed()
+    .then((data) => {
+      return data[0];
+    })
+    .catch((err) => console.log(err));
+  const localLocations = await wp
+    .posts()
+    .categories(locsCat.id)
+    .embed()
+    .perPage(100)
+    .then((data) => {
+      return data;
+    });
+
   return {
     about,
     contact,
@@ -228,6 +266,8 @@ Index.getInitialProps = async (ctx) => {
     products,
     mapCat,
     locations,
+    locsCat,
+    localLocations,
   };
 };
 

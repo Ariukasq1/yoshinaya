@@ -3,6 +3,9 @@ import { Grid, Container } from "@mui/material";
 import { getData } from "../../utils";
 
 class Special extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   renderPostItem(post) {
     return (
       <div className="scroll-item" key={post.id}>
@@ -17,6 +20,16 @@ class Special extends React.Component {
       </div>
     );
   }
+  handleOnMouseOver = () => {
+    this.props.handleBlockScrollDown(true);
+    this.props.handleBlockScrollUp(true);
+  };
+  handleOnMouseOut = () => {
+    if (typeof window !== undefined && window.innerWidth > 768) {
+      this.props.handleBlockScrollDown(false);
+      this.props.handleBlockScrollUp(false);
+    }
+  };
 
   render() {
     const { cat, posts } = this.props;
@@ -65,7 +78,11 @@ class Special extends React.Component {
             </div>
           </Grid>
           <Grid item xs={12} md={5}>
-            <div className="scroll-container scroll-chrome">
+            <div
+              className="scroll-container scroll-chrome"
+              onMouseLeave={this.handleOnMouseOut}
+              onMouseEnter={this.handleOnMouseOver}
+            >
               {posts.map((post) => this.renderPostItem(post))}
             </div>
           </Grid>

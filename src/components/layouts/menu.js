@@ -72,21 +72,22 @@ const Menu = () => {
 
           <div className="menu-drawer__menu">
             <div className="menu-drawer__search__container">
-              <Search className="menu-drawer__search" ref={searchRef}>
-                <SearchIconWrapper>
+              <div className="menu-drawer__search" ref={searchRef}>
+                <div className="menu-drawer__search__icon">
                   <img
                     src={searchIcon}
                     alt="Search Icon"
                     className="search-icon"
                   />
-                </SearchIconWrapper>
-                <StyledInputBase
+                </div>
+                <InputBase
                   placeholder="Хайх..."
                   inputProps={{ "aria-label": "search" }}
                   onFocus={() => searchRef.current.classList.add("-focus")}
                   onBlur={() => searchRef.current.classList.remove("-focus")}
+                  className="menu-drawer__search__input"
                 />
-              </Search>
+              </div>
             </div>
             <div className="menu-drawer__menu__item">Нүүр хуудас</div>
             <div className="menu-drawer__menu__item">Бидний тухай</div>
@@ -118,40 +119,4 @@ const theme = createTheme({
     },
   },
 });
-
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {},
-  transition: theme.transitions.create("all"),
-
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    //   ertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-  },
-}));
 export default Menu;

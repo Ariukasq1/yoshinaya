@@ -25,7 +25,7 @@ header {
       display: none;
 
       @include mq(xl) {
-        display: block;
+        display: none;
       }
     }
 
@@ -124,6 +124,26 @@ header {
     border-radius: 0;
     border-bottom: 0.01em solid rgba($color: $text-color, $alpha: 0.4);
     width: 60%;
+    transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    &__icon {
+      padding: 0 16px;
+      height: 100%;
+      position: absolute;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__input {
+      color: inherit;
+      & > .MuiInputBase-input {
+        padding: 8px 8px 0;
+        padding-left: calc(1em + 32px);
+        width: 100%;
+        transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      }
+    }
 
     &__container {
       position: relative;
